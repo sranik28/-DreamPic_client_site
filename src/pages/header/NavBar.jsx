@@ -29,7 +29,7 @@ const NavBar = () => {
                 <Link to='/'><h1 className='text-2xl font-bold'>MyPhotography</h1></Link>
             </div>
 
-            <ul className={`font-semibold flex items-center duration-300 flex-col py-5 md:p-0 text-white bg-opacity-90 top-20 bg-black md:bg-transparent w-full md:w-auto md:flex-row gap-6 absolute md:static z-50 ${toggle ? "left-0" : "-left-full"}`}>
+            <ul className={`font-semibold flex items-center duration-300 flex-col py-5 md:p-0 text-white bg-opacity-90 top-20 bg-black md:bg-transparent w-36 md:w-auto md:flex-row rounded-md   gap-6 absolute md:static z-50 ${toggle ? "top-0 left-0" : "-left-full duration-300"}`}>
                 <li>
                     <NavLink className={({ isActive }) => isActive ? "active" : ""} to="/">Home</NavLink>
                 </li>
@@ -45,7 +45,7 @@ const NavBar = () => {
             </ul>
             <div className='flex items-center gap-5'>
                {
-                user? <Link to='/login'><button className='px-7 py-2 bg-[#4c5696] rounded-md'>Login</button></Link>: <Link to='/login'><button className='px-7 py-2 bg-[#4c5696] rounded-md'>logOut</button></Link>
+                user? <Link to='/login'><button className='px-5 py-2 bg-[#4c5696] rounded-md'>Login</button></Link>: <Link to='/login'><button className='px-5 py-2 bg-[#4c5696] rounded-md'>logOut</button></Link>
                }
                 <button>
                     {isDark ? <HiOutlineLightBulb className="cursor-pointer" onClick={() => setIsdark(false)} /> : <MdOutlineDarkMode className="cursor-pointer" onClick={() => setIsdark(true)} />}
