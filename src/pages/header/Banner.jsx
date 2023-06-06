@@ -40,7 +40,7 @@ const Banner = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='relative w-full h-full'>
-                    <img className='w-full h-[80vh] object-cover' src="https://as2.ftcdn.net/v2/jpg/01/14/82/31/1000_F_114823177_H6RRW8yhrIMhr1ZexPMFTJIIL2aIqXey.jpg" alt="" />
+                        <img className='w-full h-[80vh] object-cover' src="https://as2.ftcdn.net/v2/jpg/01/14/82/31/1000_F_114823177_H6RRW8yhrIMhr1ZexPMFTJIIL2aIqXey.jpg" alt="" />
                         <div className='absolute top-0 left-0 w-full h-full text-white bg-black/60'>
                             <div className='absolute md:top-40 top-60 left-10 md:left-1/3'>
                                 <h1 className='my-5 text-2xl font-bold md:text-5xl'>PHOTOGRAPHY COURSES</h1>
@@ -51,7 +51,7 @@ const Banner = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='relative w-full h-full'>
-                    <img className='w-full h-[80vh] object-cover' src="https://t4.ftcdn.net/jpg/02/22/65/13/240_F_222651338_VIQxkvKjwaE6vPE31YlXuoWLR6OOwR9I.jpg" alt="" />
+                        <img className='w-full h-[80vh] object-cover' src="https://t4.ftcdn.net/jpg/02/22/65/13/240_F_222651338_VIQxkvKjwaE6vPE31YlXuoWLR6OOwR9I.jpg" alt="" />
                         <div className='absolute top-0 left-0 w-full h-full text-white bg-black/60'>
                             <div className='absolute md:top-40 top-60 left-10 md:left-1/3'>
                                 <h1 className='my-5 text-2xl font-bold md:text-5xl'>PHOTOGRAPHY COURSES</h1>

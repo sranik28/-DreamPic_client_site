@@ -5,12 +5,14 @@ import Classes from "../pages/Classes";
 import Instructors from "../pages/Instructors";
 import Dashboard from "../pages/Dashboard";
 import Login from "../pages/Login";
+import Error from "../components/Error";
 
 
 const Router = createBrowserRouter([
     {
         path: "/",
         element: <Root />,
+        errorElement: <Error />,
         children: [
             {
                 path: '/',
