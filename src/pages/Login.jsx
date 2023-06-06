@@ -4,6 +4,7 @@ import { CiLogin } from 'react-icons/ci';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import { Helmet } from 'react-helmet';
 
 const Login = () => {
 
@@ -38,6 +39,9 @@ const Login = () => {
 
     return (
         <main className='flex items-center justify-center w-full md:h-[91.9vh] bg-[#1b1e34] px-3'>
+            <Helmet>
+                <title>MyPhotography | Login</title>
+            </Helmet>
             <div className='max-w-[1240px] w-full mx-auto mt-10 grid  md:grid-cols-2 gap-5 md:gap-0'>
                 <div className='flex items-center justify-center bg-[#ffffff]  rounded-s-md'>
                     <div className='text-center bg-[#ffffff]  rounded-s-md px-3'>
