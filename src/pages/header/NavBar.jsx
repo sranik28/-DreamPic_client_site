@@ -3,12 +3,14 @@ import { Link, NavLink } from 'react-router-dom';
 import { MdOutlineDarkMode } from 'react-icons/md';
 import { HiMenuAlt2, HiOutlineLightBulb } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
+import useDark from '../../hook/useDark';
 
 const NavBar = () => {
 
     const [toggle, setToggle] = useState(false);
-    const [modeToggle, setModeToggle] = useState(false);
 
+    const [isDark, setIsdark] = useState(null)
+    useDark(isDark)
 
 
     return (
@@ -28,21 +30,20 @@ const NavBar = () => {
                     <NavLink to="/">Home</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/">Instructors</NavLink>
+                    <NavLink to="/instructors">Instructors</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/">Classes</NavLink>
+                    <NavLink to="/classes">Classes</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/">Dashboard </NavLink>
+                    <NavLink to="/dashboard">Dashboard </NavLink>
                 </li>
             </ul>
             <div className='flex items-center gap-5'>
-                <button className=''>Login</button>
+                <Link to='/login'><button className=''>Login</button></Link>
                 {
-                    modeToggle ? <MdOutlineDarkMode onClick={() => setModeToggle(!toggle)} /> : <HiOutlineLightBulb onClick={() => setModeToggle(!toggle)} />
+                    isDark ? <MdOutlineDarkMode onClick={() => setIsdark(!isDark)} /> : <HiOutlineLightBulb onClick={() => setIsdark(!isDark)} />
                 }
-                {/* <button><MdOutlineDarkMode /></button> */}
             </div>
         </nav>
     );
