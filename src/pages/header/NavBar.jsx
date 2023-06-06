@@ -22,7 +22,7 @@ const NavBar = () => {
 
             </span>
             <div>
-                <Link to='/'><h1>anik</h1></Link>
+                <Link to='/'><h1>MyPhotography</h1></Link>
             </div>
 
             <ul className={`font-semibold flex items-center duration-300 flex-col py-5 md:p-0 text-white bg-opacity-90 top-20 bg-black md:bg-transparent w-full md:w-auto md:flex-row gap-6 absolute md:static z-50 ${toggle ? "left-0" : "-left-full"}`}>
@@ -41,9 +41,9 @@ const NavBar = () => {
             </ul>
             <div className='flex items-center gap-5'>
                 <Link to='/login'><button className=''>Login</button></Link>
-                {
-                    isDark ? <MdOutlineDarkMode onClick={() => setIsdark(!isDark)} /> : <HiOutlineLightBulb onClick={() => setIsdark(!isDark)} />
-                }
+                <button> 
+                       {isDark ? <HiOutlineLightBulb className="cursor-pointer" onClick={() => setIsdark(false)} /> : <MdOutlineDarkMode className="cursor-pointer" onClick={() => setIsdark(true)}/>}
+                    </button>
             </div>
         </nav>
     );
