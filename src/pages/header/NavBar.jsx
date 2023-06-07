@@ -13,7 +13,7 @@ const NavBar = () => {
     const [toggle, setToggle] = useState(false);
     const [isDark, setIsdark] = useState(null)
     useDark(isDark)
-    const { user } = useAuthGlobally()
+    const { user, logOut } = useAuthGlobally();
 
 
     return (
@@ -26,7 +26,7 @@ const NavBar = () => {
             </span>
             <div className='flex items-center '>
                 {/* <img className='w-40' src={logo} alt="" /> */}
-                <Link to='/'><h1 className='text-2xl font-bold'>MyPhotography</h1></Link>
+                <Link to='/'><h1 className='font-bold md:text-2xl'>MyPhotography</h1></Link>
             </div>
 
             <ul className={`font-semibold flex items-center duration-300 flex-col py-5 md:p-0 text-white bg-opacity-90 top-20 bg-black md:bg-transparent w-36 md:w-auto md:flex-row rounded-md   gap-6 absolute md:static z-50 ${toggle ? "top-0 left-0" : "-left-full duration-300"}`}>
@@ -42,11 +42,17 @@ const NavBar = () => {
                 <li>
                     <NavLink className={({ isActive }) => isActive ? "active" : ""} to="/dashboard">Dashboard </NavLink>
                 </li>
+                <li>
+                    {
+                        user ? <Link to='/login'><button className='px-5 py-2 bg-[#4c5696] rounded-md'>Login</button></Link> : <Link to='/login'><button onClick={logOut} className='px-5 py-2 bg-[#4c5696] rounded-md'>logOut</button></Link>
+                    }
+                </li>
             </ul>
             <div className='flex items-center gap-5'>
-               {
-                user? <Link to='/login'><button className='px-5 py-2 bg-[#4c5696] rounded-md'>Login</button></Link>: <Link to='/login'><button className='px-5 py-2 bg-[#4c5696] rounded-md'>logOut</button></Link>
-               }
+                {
+                    user?.photoURL ? <img className="w-[35px] h-[35px] rounded-full" src={user.photoURL} title={user.displayName} alt="" /> : <></>
+                }
+
                 <button>
                     {isDark ? <HiOutlineLightBulb className="cursor-pointer" onClick={() => setIsdark(false)} /> : <MdOutlineDarkMode className="cursor-pointer" onClick={() => setIsdark(true)} />}
                 </button>

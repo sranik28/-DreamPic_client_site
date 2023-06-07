@@ -13,7 +13,7 @@ import MyIcon from './MyIcon';
 const Footer = () => {
     return (
         <footer className='bg-[#5d5599] '>
-            <ScrollToTop smooth top={500} component={<MyIcon />} />
+            <ScrollToTop smooth top={1000} component={<MyIcon />} />
             <div className=' max-w-[1240px] mx-auto py-10'>
                 <div className='grid gap-4 p-5 text-white md:grid-cols-5'>
                     <div>
