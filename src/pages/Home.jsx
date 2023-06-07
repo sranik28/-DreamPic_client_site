@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from './header/Banner';
 import { Helmet } from 'react-helmet';
+import Subscribe from '../components/Subscribe';
 
 
 
@@ -11,6 +12,7 @@ const Home = () => {
                 <title>MyPhotography | Home</title>
             </Helmet>
             <Banner />
+            <Subscribe />
         </div>
     );
 };
