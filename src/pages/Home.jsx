@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import Subscribe from '../components/Subscribe';
 import Experience from '../components/Experience';
 import TopCourses from '../components/TopCourses ';
+import TopInstructor from '../components/TopInstructor';
 
 
 
@@ -16,6 +17,7 @@ const Home = () => {
             <Banner />
             <Experience />
             <TopCourses />
+            <TopInstructor />
             <Subscribe />
         </div>
     );

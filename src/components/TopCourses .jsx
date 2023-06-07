@@ -6,7 +6,7 @@ const TopCourses = () => {
     const [topCourses, setTopCourses] = useState([]);
 
     useEffect(() => {
-        fetch('/data.json')
+        fetch('/course.json')
             .then(response => response.json())
             .then(json => setTopCourses(json));
 

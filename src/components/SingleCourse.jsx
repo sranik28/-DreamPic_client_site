@@ -1,7 +1,6 @@
 import React from 'react';
 
 const SingleCourse = ({course}) => {
-    console.log(course)
 
     const{class_name,class_image,}=course;
 

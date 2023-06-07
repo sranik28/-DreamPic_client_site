@@ -61,4 +61,4 @@ const useAuthGlobally = () => {
     return useContext(CreateAuth)
 }
 
-export { AuthProvider, useAuthGlobally }
+export { AuthProvider, useAuthGlobally };

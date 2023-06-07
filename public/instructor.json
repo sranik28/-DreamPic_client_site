@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Annie Leibovitz",
+        "image": "https://i.ibb.co/JBtb6yv/licensed-image.jpg",
+        "email": "annieLeibovitz@gmail.com"
+    },
+    {
+        "name": "Steve McCurry",
+        "image": "https://i.ibb.co/FB7Dmpg/licensed-image-3.jpg",
+        "email": "steveMcCurry@gmail.com"
+    },
+    {
+        "name": "Mario Testino",
+        "image": "https://i.ibb.co/YTjWmmX/licensed-image-2.jpg",
+        "email": "marioTestino@gmail.com"
+    },
+    {
+        "name": "David Bailey",
+        "image": "https://i.ibb.co/VqDYqxH/licensed-image-1.jpg",
+        "email": "davidBailey@gmail.com"
+    },
+    {
+        "name": "Cindy Sherman",
+        "image": "https://i.ibb.co/4Z8WBvx/images.jpg",
+        "email": "cindySherman@gmail.com"
+    },
+    {
+        "name": "Henri Cartier-Bresson",
+        "image": "https://i.ibb.co/T8gvPx1/Henri-Cartier-Bresson.webp",
+        "email": "henriCartier@gmail.com"
+    }
+]

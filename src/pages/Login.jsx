@@ -5,13 +5,14 @@ import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { Helmet } from 'react-helmet';
+import { useAuthGlobally } from '../context/AuthProvider';
 
 const Login = () => {
 
     const [showPassword, setShowPassword] = useState(false)
 
 
-    // const { signIn, signInGoogle } = useAuthGlobally();
+    const { signIn, signInGoogle } = useAuthGlobally();
     const navigate = useNavigate();
     const location = useLocation();
     console.log("login page", location)
@@ -22,8 +23,28 @@ const Login = () => {
     const {
         register,
         handleSubmit,
-        formState: { errors },
     } = useForm();
+
+    const handleLogin = (data) => {
+
+        const email = data.email;
+        const password = data.password;
+        console.log(email, password);
+
+        if (!email || !password) {
+            setError("Cannot leave any field empty")
+            return
+        }
+
+        signIn(email, password)
+            .then(() => {
+                navigate(from, { replace: true })
+                form.reset()
+            })
+            .catch(error => {
+                setError(error.message)
+            })
+    }
 
     const handelGoogle = () => {
         signInGoogle()
@@ -54,11 +75,11 @@ const Login = () => {
                 <div className='bg-black border-2 border-[#4c5696] rounded-e-md'>
                     <h1 className='my-5 text-5xl font-bold text-center text-white'>Please Login</h1>
                     <div className=' text-center py-5 rounded md:w-[500px] mx-auto my-5'>
-                        <form onSubmit={handleSubmit}>
-                            <input className='w-[80%] py-2 my-5 rounded outline-none px-4 ' type="email" name="email" placeholder='    enter your email' required />
+                        <form onSubmit={handleSubmit(handleLogin)}>
+                            <input {...register('email',{required:true})} className='w-[80%] py-2 my-5 rounded outline-none px-4 ' type="email" name="email" placeholder='    enter your email' required />
 
                             <div className='relative'>
-                                <input type={showPassword ? "text" : "password"} name="password" id="password" className='border-b-2 w-[80%] rounded py-2 px-4 outline-none text-base ' autoComplete='off' placeholder='   enter your password' />
+                                <input {...register('password',{required:true})} type={showPassword ? "text" : "password"} name="password" id="password" className='border-b-2 w-[80%] rounded py-2 px-4 outline-none text-base ' autoComplete='off' placeholder='   enter your password' />
                                 <span className='absolute md:top-3 md:right-14 top-3 right-11'>
                                     {
                                         showPassword ? <AiFillEyeInvisible className='cursor-pointer' onClick={() => setShowPassword(!showPassword)} /> : <AiFillEye className='cursor-pointer' onClick={() => setShowPassword(!showPassword)} />
