@@ -26,10 +26,10 @@ const NavBar = () => {
             </span>
             <div className='flex items-center '>
                 {/* <img className='w-40' src={logo} alt="" /> */}
-                <Link to='/'><h1 className='font-bold md:text-2xl'>MyPhotography</h1></Link>
+                <Link to='/'><h1 className='text-3xl font-bold'><span className='text-[#4c5696]'>Dream</span>Pic</h1></Link>
             </div>
 
-            <ul className={`font-semibold flex items-center duration-300 flex-col py-5 md:p-0 text-white bg-opacity-90 top-20 bg-black md:bg-transparent w-36 md:w-auto md:flex-row rounded-md   gap-6 absolute md:static z-50 ${toggle ? "top-0 left-0" : "-left-full duration-300"}`}>
+            <ul className={`font-semibold flex items-center duration-300 flex-col py-5 md:p-0 text-white bg-opacity-90 top-[11.3%] bg-black md:bg-transparent w-36 md:w-auto md:flex-row rounded-md   gap-6 absolute md:static z-50 ${toggle ? "top-0 left-0" : "-left-full duration-300"}`}>
                 <li>
                     <NavLink className={({ isActive }) => isActive ? "active" : ""} to="/">Home</NavLink>
                 </li>
