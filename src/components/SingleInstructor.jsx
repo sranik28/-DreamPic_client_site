@@ -7,10 +7,10 @@ const SingleInstructor = ({ instructor }) => {
 
     return (
         <div>
-            <div>
-                <img className='h-full rounded-md w-96' src={image} alt="" />
-                <h2>{name}</h2>
-                <p>{email}</p>
+            <div className='text-center'>
+                <img className='object-cover rounded-md h-96 w-96' src={image} alt="" />
+                <h2 className='mt-4 text-2xl font-semibold'>{name}</h2>
+                <p className='my-2'>{email}</p>
             </div>
         </div>
     );
