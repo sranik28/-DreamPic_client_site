@@ -2,7 +2,7 @@ import React from 'react';
 
 const Subscribe = () => {
     return (
-        <main className='py-10 bg-[#54525d] '>
+        <main className='py-10 bg-[#54525d] px-3 '>
             <div className='max-w-[1500px] mx-auto rounded-md bg-gray-200 p-5'>
                 <div>
                     <h1 className='text-4xl font-semibold'>Subscribe</h1>
