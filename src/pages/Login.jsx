@@ -38,17 +38,17 @@ const Login = () => {
     }
 
     return (
-        <main className='flex items-center justify-center w-full md:h-[91.9vh] bg-[#1b1e34] px-3'>
+        <main className='flex items-center justify-center w-full md:h-[91.9vh] bg-[#1b1e34] px-3 '>
             <Helmet>
                 <title>MyPhotography | Login</title>
             </Helmet>
-            <div className='max-w-[1240px] w-full mx-auto mt-10 grid  md:grid-cols-2 gap-5 md:gap-0'>
-                <div className='flex items-center justify-center bg-[#ffffff]  rounded-s-md'>
-                    <div className='text-center bg-[#ffffff]  rounded-s-md px-3'>
+            <div className='max-w-[1240px] w-full mx-auto mt-10 grid  md:grid-cols-2 gap-5 md:gap-0 py-5'>
+                <div className='flex items-center justify-center bg-[#ffffff]  rounded-s-md p-3 '>
+                    <div className='text-center bg-[#ffffff]  rounded-s-md px-3 '>
                         <h1 className='my-5 text-2xl font-bold '>
                             Welcome to the <br /> MyPhotography Learning Portal</h1>
                         <p className='mb-5 text-lg'>If you’re not a registered student, please click the button below to sign up and gain instant access to our range of award-winning photography courses.</p>
-                        <Link className='px-10 py-2 font-semibold text-white bg-black rounded-md ' to="/">Home</Link>
+                        <Link className='px-10 py-2 font-semibold text-white bg-black rounded-md' to="/">Home</Link>
                     </div>
                 </div>
                 <div className='bg-black border-2 border-[#4c5696] rounded-e-md'>

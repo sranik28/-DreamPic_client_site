@@ -17,7 +17,7 @@ const NavBar = () => {
 
 
     return (
-        <nav className='fixed top-0 left-0 z-50 flex items-center justify-between w-full px-3 py-5 text-white bg-black/90 md:px-10'>
+        <nav className='flex items-center justify-between w-full px-3 py-5 text-white bg-black/90 md:px-10'>
             <span className='md:hidden'>
                 {
                     toggle ? <AiOutlineClose onClick={() => setToggle(!toggle)} /> : <HiMenuAlt2 onClick={() => setToggle(!toggle)} />

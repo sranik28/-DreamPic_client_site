@@ -6,6 +6,7 @@ import Instructors from "../pages/Instructors";
 import Dashboard from "../pages/Dashboard";
 import Login from "../pages/Login";
 import Error from "../components/Error";
+import Registration from "../pages/Registration";
 
 
 const Router = createBrowserRouter([
@@ -33,6 +34,10 @@ const Router = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login />
+            },
+            {
+                path: '/register',
+                element: <Registration />
             },
         ]
     }
