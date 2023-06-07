@@ -1,0 +1,56 @@
+[
+    {
+        "class_name": "Beginners Photography Course",
+        "class_image": "https://i.ibb.co/ZfBk5rQ/Complete-guide-to-Photography-Online-Course-picture-1.jpg",
+        "instructor_name": "Henri Cartier-Bresson",
+        "instructor_email": "Henri Cartier-Bresson@gmail.com",
+        "avilable_seats": 60,
+        "price": 15,
+        "status": "Approved"
+    },
+    {
+        "class_name": "Photoshop Course for Photographers",
+        "class_image": "https://i.ibb.co/g75qmbh/Photoshop-Course-for-Photographers-Course-card.jpg",
+        "instructor_name": "Mario Testino",
+        "instructor_email": "Mario Testino@gmail.com",
+        "avilable_seats": 30,
+        "price": 25,
+        "status": "Approved"
+    },
+    {
+        "class_name": "Complete Guide to Photography Book",
+        "class_image": "https://i.ibb.co/LPJQxX8/Photography-learning-book.jpg",
+        "instructor_name": "Annie Leibovitz",
+        "instructor_email": "Annie Leibovitz@gmail.com",
+        "avilable_seats": 50,
+        "price": 18,
+        "status": "Approved"
+    },
+    {
+        "class_name": "Complete Guide to Photography eBook",
+        "class_image": "https://i.ibb.co/HFVn5CW/Photography-e-Book-for-phones-tablets-and-computers.jpg",
+        "instructor_name": "Steve McCurry",
+        "instructor_email": "Steve McCurry@gmail.com",
+        "avilable_seats": 35,
+        "price": 26,
+        "status": "Approved"
+    },
+    {
+        "class_name": "Portrait Retouching Course",
+        "class_image": "https://i.ibb.co/48pnT24/Portrait-Retouching-Course.jpg",
+        "instructor_name": "Cindy Sherman",
+        "instructor_email": "Cindy Sherman@gmail.com",
+        "avilable_seats": 45,
+        "price": 22,
+        "status": "Approved"
+    },
+    {
+        "class_name": "Pro Landscape Photography Course ",
+        "class_image": "https://i.ibb.co/Vq9hvpn/Landscape-photography-course-card-1500px-60.jpg",
+        "instructor_name": "David Bailey",
+        "instructor_email": "David Bailey@gmail.com",
+        "avilable_seats": 55,
+        "price": 19,
+        "status": "Approved"
+    }
+]

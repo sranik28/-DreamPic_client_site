@@ -10,7 +10,7 @@ const Experience = () => {
             </div>
             <div className='gap-10 my-20 md:flex'>
                 <h2 className='flex items-center mb-8 text-5xl font-bold md:mb-0'>Simple. <br /> Stunning. <br /> Convenient.</h2>
-                <img src={experience} alt="" />
+                <img className='rounded-md' src={experience} alt="" />
             </div>
         </div>
     );
