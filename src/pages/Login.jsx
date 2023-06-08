@@ -61,7 +61,7 @@ const Login = () => {
     return (
         <main className='flex items-center justify-center w-full md:h-[91.9vh] bg-[#1b1e34] px-3 '>
             <Helmet>
-                <title>MyPhotography | Login</title>
+                <title>DreamPic | Login</title>
             </Helmet>
             <div className='max-w-[1240px] w-full mx-auto mt-10 grid  md:grid-cols-2 gap-5 md:gap-0 py-5'>
                 <div data-aos="fade-right"

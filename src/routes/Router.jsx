@@ -8,7 +8,8 @@ import Error from "../components/Error";
 import Registration from "../pages/Registration";
 import Dashboard from "../layouts/Dashboard";
 import PrivateRouter from "../private/PrivateRoute";
-import Table from "../Dashboard.jsx/Components/Table";
+import Table from "../Dashboard.jsx/student/Table";
+
 
 
 

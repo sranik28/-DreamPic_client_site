@@ -4,7 +4,8 @@
         "class_image": "https://i.ibb.co/ZfBk5rQ/Complete-guide-to-Photography-Online-Course-picture-1.jpg",
         "instructor_name": "Henri Cartier-Bresson",
         "instructor_email": "Henri Cartier-Bresson@gmail.com",
-        "avilable_seats": 60,
+        "avilable_seats": 20,
+        "student_enroll":5000,
         "price": 15,
         "status": "Approved"
     },
@@ -14,6 +15,7 @@
         "instructor_name": "Mario Testino",
         "instructor_email": "Mario Testino@gmail.com",
         "avilable_seats": 30,
+        "student_enroll":3500,
         "price": 25,
         "status": "Approved"
     },
@@ -22,7 +24,8 @@
         "class_image": "https://i.ibb.co/LPJQxX8/Photography-learning-book.jpg",
         "instructor_name": "Annie Leibovitz",
         "instructor_email": "Annie Leibovitz@gmail.com",
-        "avilable_seats": 50,
+        "avilable_seats": 40,
+        "student_enroll":4000,
         "price": 18,
         "status": "Approved"
     },
@@ -32,6 +35,7 @@
         "instructor_name": "Steve McCurry",
         "instructor_email": "Steve McCurry@gmail.com",
         "avilable_seats": 35,
+        "student_enroll":3000,
         "price": 26,
         "status": "Approved"
     },
@@ -41,6 +45,7 @@
         "instructor_name": "Cindy Sherman",
         "instructor_email": "Cindy Sherman@gmail.com",
         "avilable_seats": 45,
+        "student_enroll":4500,
         "price": 22,
         "status": "Approved"
     },
@@ -49,7 +54,58 @@
         "class_image": "https://i.ibb.co/Vq9hvpn/Landscape-photography-course-card-1500px-60.jpg",
         "instructor_name": "David Bailey",
         "instructor_email": "David Bailey@gmail.com",
+        "avilable_seats": 30,
+        "student_enroll":3000,
+        "price": 19,
+        "status": "Approved"
+    },
+    {
+        "class_name": "Wildlife photography Course ",
+        "class_image": "https://i.ibb.co/r0zbdst/Wildlife-Photography-course-1000px-60-2.jpg",
+        "instructor_name": "David Bailey",
+        "instructor_email": "David Bailey@gmail.com",
         "avilable_seats": 55,
+        "student_enroll":4000,
+        "price": 19,
+        "status": "Approved"
+    },
+    {
+        "class_name": "Studio Lighting Course ",
+        "class_image": "https://i.ibb.co/hsjtwpr/Photographer-teaching-Studio-Lighting.jpg",
+        "instructor_name": "David Bailey",
+        "instructor_email": "David Bailey@gmail.com",
+        "avilable_seats": 55,
+        "student_enroll":2000,
+        "price": 19,
+        "status": "Approved"
+    },
+    {
+        "class_name": "Macro Photography Course ",
+        "class_image": "https://i.ibb.co/5KLZyyF/Macro-Photography-Course-card.jpg",
+        "instructor_name": "David Bailey",
+        "instructor_email": "David Bailey@gmail.com",
+        "avilable_seats": 55,
+        "student_enroll":4200,
+        "price": 19,
+        "status": "Approved"
+    },
+    {
+        "class_name": "Lightroom Course Online ",
+        "class_image": "https://i.ibb.co/hWXRhPr/Lightroom-Course-card.jpg",
+        "instructor_name": "David Bailey",
+        "instructor_email": "David Bailey@gmail.com",
+        "avilable_seats": 55,
+        "student_enroll":3050,
+        "price": 19,
+        "status": "Approved"
+    },
+    {
+        "class_name": "Fine Art Landscape Photography  ",
+        "instructor_name": "Ansel Adams",
+        "class_image": "https://i.ibb.co/PcTBZQ2/Fine-art-landscape-photography-course-image.jpg",
+        "instructor_email": "David Bailey@gmail.com",
+        "avilable_seats": 55,
+        "student_enroll":4600,
         "price": 19,
         "status": "Approved"
     }

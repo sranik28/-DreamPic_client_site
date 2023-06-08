@@ -5,7 +5,7 @@ const Instructors = () => {
     return (
         <div>
             <Helmet>
-                <title>MyPhotography | Instructors</title>
+                <title>DreamPic | Instructors</title>
             </Helmet> 
         </div>
     );

@@ -5,6 +5,7 @@ import RegistrationImg from '../assets/registion/high-angle-shot-lens-headphones
 import { useAuthGlobally } from '../context/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import { FcGoogle } from 'react-icons/fc';
+import { Helmet } from 'react-helmet';
 
 const Registration = () => {
 
@@ -74,7 +75,10 @@ const Registration = () => {
     }
 
     return (
-        <main className='' >
+        <main>
+             <Helmet>
+                <title>DreamPic | Registration</title>
+            </Helmet>
             <div className='max-w-[1240px] mx-auto   '>
                 <h1 className='mt-20 text-5xl font-bold text-center '>Please Registration</h1>
                 <form onSubmit={handleSubmit(handleRegister)} className='text-center py-5  rounded md:w-[500px]  mx-auto my-5'>

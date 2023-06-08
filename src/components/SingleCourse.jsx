@@ -6,7 +6,7 @@ const SingleCourse = ({course}) => {
 
     return (
         <div className='text-center '>
-            <img className='rounded-md w-96' src={class_image} alt="" />
+            <img className='object-cover rounded-md w-96' src={class_image} alt="" />
             <h2 className='my-2 text-xl font-bold'>{class_name}</h2>
         </div>
     );
