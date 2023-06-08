@@ -5,6 +5,7 @@ import Subscribe from '../components/Subscribe';
 import Experience from '../components/Experience';
 import TopCourses from '../components/TopCourses ';
 import TopInstructor from '../components/TopInstructor';
+import VideoSection from '../components/VideoSection';
 
 
 
@@ -18,6 +19,7 @@ const Home = () => {
             <Experience />
             <TopCourses />
             <TopInstructor />
+            <VideoSection />
             <Subscribe />
         </div>
     );

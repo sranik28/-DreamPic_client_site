@@ -6,7 +6,7 @@ const TopCourses = () => {
     const [topCourses, setTopCourses] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/classes')
+        fetch('http://localhost:9999/top-classes')
             .then(response => response.json())
             .then(json => setTopCourses(json));
 
