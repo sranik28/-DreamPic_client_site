@@ -28,5 +28,30 @@
         "name": "Henri Cartier-Bresson",
         "image": "https://i.ibb.co/T8gvPx1/Henri-Cartier-Bresson.webp",
         "email": "henriCartier@gmail.com"
+    },
+    {
+        "name": "Eugenio Recuenco",
+        "image": "https://i.ibb.co/GCf8xR1/Screenshot-2023-04-09-at-14-34-30.jpg",
+        "email": "henriCartier@gmail.com"
+    },
+    {
+        "name": "Sally Mann",
+        "image": "https://i.ibb.co/4jz6yLG/licensed-image.jpg",
+        "email": "henriCartier@gmail.com"
+    },
+    {
+        "name": "Ellen von Unwerth",
+        "image": "https://i.ibb.co/k8cQ0k9/licensed-image-1.jpg",
+        "email": "henriCartier@gmail.com"
+    },
+    {
+        "name": "Kelechi-Amadi",
+        "image": "https://i.ibb.co/w6Y2q7c/Kelechi-Amadi.png",
+        "email": "henriCartier@gmail.com"
+    },
+    {
+        "name": " Valter Antunes",
+        "image": "https://i.ibb.co/2W2bQx1/1542110209-fotolux.jpg",
+        "email": "henriCartier@gmail.com"
     }
 ]
