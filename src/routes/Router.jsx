@@ -8,7 +8,8 @@ import Error from "../components/Error";
 import Registration from "../pages/Registration";
 import Dashboard from "../layouts/Dashboard";
 import PrivateRouter from "../private/PrivateRoute";
-import Table from "../Dashboard.jsx/student/Table";
+import AddClass from "../Dashboard.jsx/Instructors/shared/AddClass";
+import Table from "../Dashboard.jsx/Table";
 
 
 
@@ -25,7 +26,7 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/classes',
-                element: <PrivateRouter ><Classes /></PrivateRouter>
+                element: <Classes />
             },
             {
                 path: '/instructors',
@@ -39,18 +40,22 @@ const Router = createBrowserRouter([
                 path: '/register',
                 element: <Registration />
             },
-           
+
         ]
     },
     {
         path: "/dashboard",
-        element: <Dashboard />,
+        element: <PrivateRouter><Dashboard /></PrivateRouter>,
         errorElement: <Error />,
         children: [
             {
                 path: '/dashboard/table',
                 element: <Table />
-            }
+            },
+            {
+                path: '/dashboard/addClass',
+                element: <AddClass />
+            },
         ]
     }
 ]);
