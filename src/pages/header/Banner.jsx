@@ -22,7 +22,7 @@ const Banner = () => {
                         <div className='absolute top-0 left-0 w-full h-full text-white bg-black/60'>
                             <div className='absolute md:top-40 top-60 left-10 md:left-1/3'>
                                 <h1 className='my-5 text-2xl font-bold md:text-5xl'>PHOTOGRAPHY COURSES</h1>
-                                <p className='text-center'>By DreamPic</p>
+                                <p className='text-xl text-center'>By DreamPic</p>
                             </div>
                         </div>
                     </div>

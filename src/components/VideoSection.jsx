@@ -20,8 +20,8 @@ const VideoSection = () => {
     };
 
     return (
-        <div className="max-w-[1240px] mx-auto mb-20">
-            <div className="my-10 text-center border-indigo-500 border-x-4">
+        <div className="px-3 max-w-[1240px] mx-auto mb-20">
+            <div className="my-10 text-center border-indigo-500  border-x-4">
                 <h1 className="text-4xl font-bold md:text-6xl">
                     Our Blog <span className="text-[#4c5696]">Video</span>
                 </h1>
