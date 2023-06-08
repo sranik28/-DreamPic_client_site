@@ -10,6 +10,13 @@ import Dashboard from "../layouts/Dashboard";
 import PrivateRouter from "../private/PrivateRoute";
 import AddClass from "../Dashboard.jsx/Instructors/shared/AddClass";
 import Table from "../Dashboard.jsx/Table";
+import MyClass from "../Dashboard.jsx/Instructors/shared/MyClass";
+import ManageClass from "../Dashboard.jsx/admin/shared/ManageClass";
+import ManageUser from "../Dashboard.jsx/admin/shared/ManageUser";
+import MyEnrollClass from "../Dashboard.jsx/student/shared/MyEnrollClass";
+import MySelectClass from "../Dashboard.jsx/student/shared/MySelectClass";
+import Payment from "../Dashboard.jsx/student/shared/Payment";
+import PaymentHistory from "../Dashboard.jsx/student/shared/PaymentHistory";
 
 
 
@@ -49,12 +56,36 @@ const Router = createBrowserRouter([
         errorElement: <Error />,
         children: [
             {
-                path: '/dashboard/table',
-                element: <Table />
+                path: '/dashboard/add-class',
+                element: <AddClass />
             },
             {
-                path: '/dashboard/addClass',
-                element: <AddClass />
+                path: '/dashboard/my-class',
+                element: <MyClass />
+            },
+            {
+                path: '/dashboard/manage-class',
+                element: <ManageClass />
+            },
+            {
+                path: '/dashboard/manage-users',
+                element: <ManageUser />
+            },
+            {
+                path: '/dashboard/my-enroll-class',
+                element: <MyEnrollClass />
+            },
+            {
+                path: '/dashboard/my-select-class',
+                element: <MySelectClass />
+            },
+            {
+                path: '/dashboard/payment',
+                element: <Payment />
+            },
+            {
+                path: '/dashboard/payment-history',
+                element: <PaymentHistory />
             },
         ]
     }

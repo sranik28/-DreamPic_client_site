@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
-import useAxiosSecure from "./useAxiosSecure";
 import { useAuthGlobally } from "../context/AuthProvider";
+import useAxiosSecure from "./useAxiosSecure";
 
 
 const useAuthorization = () => {
