@@ -18,7 +18,7 @@ const Footer = () => {
                 <div className='grid gap-4 p-5 text-white md:grid-cols-5'>
                     <div>
                         {/* <Link to='/'><img className='w-20 h-20 -mb-2' src={logo} alt="" /></Link> */}
-                        <h1 className='text-2xl italic font-bold'>MyPhotography</h1>
+                        <h1 className='text-2xl italic font-bold'> <span className='text-[#1b2349]'>Dream</span>Pic</h1>
                         <div className='my-5'>
                             <img className='my-3' src={footer1} alt="" />
                             <img src={footer2} alt="" />
@@ -41,7 +41,7 @@ const Footer = () => {
                         <h1 className='text-2xl font-bold text-black'>Contact</h1>
                         <span className='flex items-center gap-2 my-3'><HiLocationMarker className='text-black' /><p>Mohakhali, Dhaka-1215</p></span>
                         <span className='flex items-center gap-2'><BsTelephoneFill className='text-black' /><p>+880 1259876312</p></span>
-                        <span className='flex items-center gap-2'><MdEmail className='text-black' /><p className="py-2">info@gamefrenzy.com</p></span>
+                        <span className='flex items-center gap-2'><MdEmail className='text-black' /><p className="py-2">info@DreamPic.com</p></span>
                     </div>
                     <div>
                         <h1 className='text-2xl font-bold text-black'>Follow Us</h1>
@@ -55,10 +55,10 @@ const Footer = () => {
             </div>
             <hr className='border-1 border-black max-w-[1240px] mx-auto py-5' />
             <div className="md:flex justify-between items-center text-black max-w-[1240px] mx-auto px-6 pb-8">
-                <h1>&copy;2023 MyPhotography
+                <h1>&copy;2023 DreamPic
                     . All Rights Reserved</h1>
                 <h1>Powered by <span className="font-bold">
-                    MyPhotography
+                DreamPic
                 </span></h1>
             </div>
         </footer>

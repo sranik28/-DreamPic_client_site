@@ -7,6 +7,8 @@ import Login from "../pages/Login";
 import Error from "../components/Error";
 import Registration from "../pages/Registration";
 import Dashboard from "../layouts/Dashboard";
+import PrivateRouter from "../private/PrivateRoute";
+import Table from "../Dashboard.jsx/Components/Table";
 
 
 
@@ -22,16 +24,12 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/classes',
-                element: <Classes />
+                element: <PrivateRouter ><Classes /></PrivateRouter>
             },
             {
                 path: '/instructors',
                 element: <Instructors />
             },
-            // {
-            //     path: '/dashboard',
-            //     element: <Dashboard />
-            // },
             {
                 path: '/login',
                 element: <Login />
@@ -40,6 +38,7 @@ const Router = createBrowserRouter([
                 path: '/register',
                 element: <Registration />
             },
+           
         ]
     },
     {
@@ -48,10 +47,11 @@ const Router = createBrowserRouter([
         errorElement: <Error />,
         children: [
             {
-
+                path: '/dashboard/table',
+                element: <Table />
             }
         ]
     }
 ]);
 
-export default Router
+export default Router;

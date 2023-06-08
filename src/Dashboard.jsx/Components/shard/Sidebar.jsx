@@ -32,7 +32,7 @@ const Sidebar = () => {
                     </>
                         :
                         <>
-                            <li className="mt-4"><NavLink to="/dashboard/profile" className={({ isActive }) => isActive ? "d-active flex gap-2 text-[16px] items-center" : "uppercase flex gap-2 text-[16px] items-center"}><HiHome className="text-[24px]" /><span>User Home</span></NavLink></li>
+                            <li className="mt-4"><NavLink to="/dashboard/table" className={({ isActive }) => isActive ? "d-active flex gap-2 text-[16px] items-center" : "uppercase flex gap-2 text-[16px] items-center"}><HiHome className="text-[24px]" /><span>Table</span></NavLink></li>
                             <li className="mt-4"><NavLink to="/dashboard/reservation" className={({ isActive }) => isActive ? "d-active flex gap-2 text-[16px] items-center" : "uppercase flex gap-2 text-[16px] items-center"}><FaRegCalendarAlt className="text-[24px]" /><span>reservation</span></NavLink></li>
                             <li className="mt-4"><NavLink to="/dashboard/payment-history" className={({ isActive }) => isActive ? "d-active flex gap-2 text-[16px] items-center" : "uppercase flex gap-2 text-[16px] items-center"}><IoWallet className="text-[24px]" /><span>payment history</span></NavLink></li>
                             <li className="mt-4"><NavLink to="/dashboard/my-cart" className={({ isActive }) => isActive ? "d-active flex gap-2 text-[16px] items-center" : "uppercase flex gap-2 text-[16px] items-center"}><AiOutlineShoppingCart className="text-[24px]" /><span>my cart</span></NavLink></li>

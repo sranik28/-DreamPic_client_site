@@ -44,7 +44,7 @@ const NavBar = () => {
                 </li>
                 <li>
                     {
-                        user ? <Link to='/login'><button className='px-5 py-2 bg-[#4c5696] rounded-md'>Login</button></Link> : <Link to='/login'><button onClick={logOut} className='px-5 py-2 bg-[#4c5696] rounded-md'>logOut</button></Link>
+                        user?.email ? <Link to='/login'><button onClick={logOut}  className='px-5 py-2 bg-[#4c5696] rounded-md'>LogOut</button></Link> : <Link to='/login'><button onClick={logOut} className='px-5 py-2 bg-[#4c5696] rounded-md'>login</button></Link>
                     }
                 </li>
             </ul>

@@ -18,44 +18,66 @@ const Banner = () => {
             >
                 <SwiperSlide>
                     <div className='relative w-full h-full'>
-                        <img className='w-full h-[80vh] object-cover ' src="https://img.freepik.com/free-photo/reflection-lights-mountain-lake-captured-parco-ciani-lugano-switzerland_181624-24209.jpg?w=1060&t=st=1686082491~exp=1686083091~hmac=296ed77b7ab281ca0a1310f32cbf45581af27d4e26618c79e447839761a0192a" alt="" />
+                        <img className='w-full h-[80vh] object-cover ' src="https://i.ibb.co/VBq5B1s/beautiful-tropical-beach-sea-with-coconut-palm-tree-74190-7463.jpg" alt="" />
                         <div className='absolute top-0 left-0 w-full h-full text-white bg-black/60'>
                             <div className='absolute md:top-40 top-60 left-10 md:left-1/3'>
                                 <h1 className='my-5 text-2xl font-bold md:text-5xl'>PHOTOGRAPHY COURSES</h1>
-                                <p className='text-center'>By MyPhotography</p>
+                                <p className='text-center'>By DreamPic</p>
                             </div>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='relative w-full h-full'>
-                        <img className='w-full h-[80vh] object-cover' src="https://img.freepik.com/free-photo/sunset-twilight-time_1388-111.jpg?w=1060&t=st=1686082569~exp=1686083169~hmac=889b37aa0e5a7448723565ef88802375830643c074cc24c19915f3ade1784531" alt="" />
+                        <img className='w-full h-[80vh] object-cover' src="https://i.ibb.co/QXQLmxr/dark-sunset-ashtamudi-lake-kollam-181624-56891.jpg" alt="" />
                         <div className='absolute top-0 left-0 w-full h-full text-white bg-black/60'>
                             <div className='absolute md:top-40 top-60 left-10 md:left-1/3'>
                                 <h1 className='my-5 text-2xl font-bold md:text-5xl'>PHOTOGRAPHY COURSES</h1>
-                                <p className='text-center'>By MyPhotography</p>
+                                <p className='text-center'>By DreamPic</p>
                             </div>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='relative w-full h-full'>
-                        <img className='w-full h-[80vh] object-cover' src="https://as2.ftcdn.net/v2/jpg/01/14/82/31/1000_F_114823177_H6RRW8yhrIMhr1ZexPMFTJIIL2aIqXey.jpg" alt="" />
+                        <img className='w-full h-[80vh] object-cover' src="https://i.ibb.co/cXKsrtc/beautiful-tropical-beach-sea-with-coconut-palm-tree-74190-7464.jpg" alt="" />
                         <div className='absolute top-0 left-0 w-full h-full text-white bg-black/60'>
                             <div className='absolute md:top-40 top-60 left-10 md:left-1/3'>
                                 <h1 className='my-5 text-2xl font-bold md:text-5xl'>PHOTOGRAPHY COURSES</h1>
-                                <p className='text-center'>By MyPhotography</p>
+                                <p className='text-center'>By DreamPic</p>
                             </div>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='relative w-full h-full'>
-                        <img className='w-full h-[80vh] object-cover' src="https://t4.ftcdn.net/jpg/02/22/65/13/240_F_222651338_VIQxkvKjwaE6vPE31YlXuoWLR6OOwR9I.jpg" alt="" />
+                        <img className='w-full h-[80vh] object-cover' src="https://i.ibb.co/28YQsCg/caribbean-landscape-1048-1863.jpg" alt="" />
                         <div className='absolute top-0 left-0 w-full h-full text-white bg-black/60'>
                             <div className='absolute md:top-40 top-60 left-10 md:left-1/3'>
                                 <h1 className='my-5 text-2xl font-bold md:text-5xl'>PHOTOGRAPHY COURSES</h1>
-                                <p className='text-center'>By MyPhotography</p>
+                                <p className='text-center'>By DreamPic</p>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className='relative w-full h-full'>
+                        <img className='w-full h-[80vh] object-cover' src="https://i.ibb.co/G0n2TQ4/beautiful-sun-shining-across-mountains-181624-59069.jpg" alt="" />
+                        <div className='absolute top-0 left-0 w-full h-full text-white bg-black/60'>
+                            <div className='absolute md:top-40 top-60 left-10 md:left-1/3'>
+                                <h1 className='my-5 text-2xl font-bold md:text-5xl'>PHOTOGRAPHY COURSES</h1>
+                                <p className='text-center'>By DreamPic</p>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className='relative w-full h-full'>
+                        <img className='w-full h-[80vh] object-cover' src="https://i.ibb.co/Xxs67Wf/palms-beautiful-garden-reflected-lake-during-daytime-181624-15510.jpg" alt="" />
+                        <div className='absolute top-0 left-0 w-full h-full text-white bg-black/60'>
+                            <div className='absolute md:top-40 top-60 left-10 md:left-1/3'>
+                                <h1 className='my-5 text-2xl font-bold md:text-5xl'>PHOTOGRAPHY COURSES</h1>
+                                <p className='text-center'>By DreamPic</p>
                             </div>
                         </div>
                     </div>

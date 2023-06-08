@@ -64,7 +64,9 @@ const Login = () => {
                 <title>MyPhotography | Login</title>
             </Helmet>
             <div className='max-w-[1240px] w-full mx-auto mt-10 grid  md:grid-cols-2 gap-5 md:gap-0 py-5'>
-                <div className='flex items-center justify-center bg-[#ffffff]  rounded-s-md p-3 '>
+                <div data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine" className='flex items-center justify-center bg-[#ffffff]  rounded-s-md p-3 '>
                     <div className='text-center bg-[#ffffff]  rounded-s-md px-3 '>
                         <h1 className='my-5 text-2xl font-bold '>
                             Welcome to the <br /> MyPhotography Learning Portal</h1>
@@ -72,14 +74,17 @@ const Login = () => {
                         <Link className='px-10 py-2 font-semibold text-white bg-black rounded-md' to="/">Home</Link>
                     </div>
                 </div>
-                <div className='bg-black border-2 border-[#4c5696] rounded-e-md'>
+                <div data-aos="fade-left"
+                    data-aos-anchor="#example-anchor"
+                    data-aos-offset="500"
+                    data-aos-duration="500" className='bg-black border-2 border-[#4c5696] rounded-e-md'>
                     <h1 className='my-5 text-5xl font-bold text-center text-white'>Please Login</h1>
                     <div className=' text-center py-5 rounded md:w-[500px] mx-auto my-5'>
                         <form onSubmit={handleSubmit(handleLogin)}>
-                            <input {...register('email',{required:true})} className='w-[80%] py-2 my-5 rounded outline-none px-4 ' type="email" name="email" placeholder='    enter your email' required />
+                            <input {...register('email', { required: true })} className='w-[80%] py-2 my-5 rounded outline-none px-4 ' type="email" name="email" placeholder='    enter your email' required />
 
                             <div className='relative'>
-                                <input {...register('password',{required:true})} type={showPassword ? "text" : "password"} name="password" id="password" className='border-b-2 w-[80%] rounded py-2 px-4 outline-none text-base ' autoComplete='off' placeholder='   enter your password' />
+                                <input {...register('password', { required: true })} type={showPassword ? "text" : "password"} name="password" id="password" className='border-b-2 w-[80%] rounded py-2 px-4 outline-none text-base ' autoComplete='off' placeholder='   enter your password' />
                                 <span className='absolute md:top-3 md:right-14 top-3 right-11'>
                                     {
                                         showPassword ? <AiFillEyeInvisible className='cursor-pointer' onClick={() => setShowPassword(!showPassword)} /> : <AiFillEye className='cursor-pointer' onClick={() => setShowPassword(!showPassword)} />
