@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BsTelephoneFill,BsInstagram,BsYoutube,BsTiktok } from 'react-icons/bs';
+import { BsTelephoneFill, BsInstagram, BsYoutube, BsTiktok } from 'react-icons/bs';
 import { HiLocationMarker } from 'react-icons/hi';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { FaFacebookF } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import footer1 from '../assets/footer/logo-footer.svg'
-import footer2 from '../assets/footer/pp-logo-footer.svg'
 import ScrollToTop from 'react-scroll-to-top';
 import MyIcon from './MyIcon';
+import logo from '../assets/logo.png';
 
 const Footer = () => {
     return (
@@ -17,25 +16,29 @@ const Footer = () => {
             <div className=' max-w-[1240px] mx-auto py-10'>
                 <div className='grid gap-4 p-5 text-white md:grid-cols-5'>
                     <div>
-                        {/* <Link to='/'><img className='w-20 h-20 -mb-2' src={logo} alt="" /></Link> */}
-                        <h1 className='text-2xl italic font-bold'> <span className='text-[#1b2349]'>Dream</span>Pic</h1>
-                        <div className='my-5'>
-                            <img className='my-3' src={footer1} alt="" />
-                            <img src={footer2} alt="" />
+                        <div >
+                            <Link to='/'><img className='w-20 h-20 -mb-2 ' src={logo} alt="" /></Link>
+                            <h1 className='mt-2 text-2xl italic font-bold'> <span className='text-[#1b2349]'>Dream</span>Pic</h1>
+                        </div>
+                        <div className='flex items-center justify-center my-5'>
+                            <input type="text" name="" id="" placeholder='Search...' className='w-full p-2 bg-[#1b2349] text-white rounded-s-md' />
+                            <input className='outline-none px-5 py-2 bg-[#0a0c1a] rounded-e-md' type="submit" value="submit" />
                         </div>
                     </div>
                     <div>
                         <h1 className='text-2xl font-bold text-black'>Resources</h1>
                         <p className='my-3'>Course Portal</p>
                         <p className='mb-3'>iPhone Photography Blog</p>
+                        <p className='mb-3'>Light Room Mobile</p>
                         <p>Photography Blog</p>
                     </div>
                     <div>
                         <h1 className='text-2xl font-bold text-black'>About</h1>
-                        <p className='my-3'><Link to='/instructors'>Instructors</Link></p>
-                        <p><Link to='/classes'>Classes</Link></p>
-                        <p className='my-3'><Link to='/dashboard'>Dashboard</Link></p>
-                        <p><Link to='/login'>Login</Link></p>
+                        <p className='my-3 hover:underline'><Link to='/'>Home</Link></p>
+                        <p className='my-3 hover:underline'><Link to='/instructors'>Instructors</Link></p>
+                        <p className='hover:underline'><Link to='/classes'>Classes</Link></p>
+                        <p className='my-3 hover:underline'><Link to='/dashboard'>Dashboard</Link></p>
+                        <p className='hover:underline'><Link to='/login'>Login</Link></p>
                     </div>
                     <div>
                         <h1 className='text-2xl font-bold text-black'>Contact</h1>
@@ -45,11 +48,11 @@ const Footer = () => {
                     </div>
                     <div>
                         <h1 className='text-2xl font-bold text-black'>Follow Us</h1>
-                        <p className='flex items-center gap-2 my-3'> <span><FaFacebookF className='w-5 h-5 text-blue-800' /> </span> <Link>Facebook</Link></p>
-                        <p className='flex items-center gap-2 my-3'> <span><BsInstagram className='w-5 h-5 text-red-800' /> </span> <Link>Instagram</Link></p>
-                        <p className='flex items-center gap-2 my-3'> <span><BsYoutube className='w-5 h-5 text-red-800' /> </span> <Link>Youtube</Link></p>
-                        <p className='flex items-center gap-2 my-3'> <span><BsTiktok className='w-5 h-5 text-blue-800' /> </span> <Link>TikTok</Link></p>
-                        <p className='flex items-center gap-2 my-3'> <span><AiFillLinkedin className='w-5 h-5 text-blue-800' /> </span> <Link>Linkedin</Link></p>
+                        <p className='flex items-center gap-2 my-3 hover:underline'> <span><FaFacebookF className='w-5 h-5 text-blue-800' /> </span> <Link>Facebook</Link></p>
+                        <p className='flex items-center gap-2 my-3 hover:underline'> <span><BsInstagram className='w-5 h-5 text-red-800' /> </span> <Link>Instagram</Link></p>
+                        <p className='flex items-center gap-2 my-3 hover:underline'> <span><BsYoutube className='w-5 h-5 text-red-800' /> </span> <Link>Youtube</Link></p>
+                        <p className='flex items-center gap-2 my-3 hover:underline'> <span><BsTiktok className='w-5 h-5 text-blue-800' /> </span> <Link>TikTok</Link></p>
+                        <p className='flex items-center gap-2 my-3 hover:underline'> <span><AiFillLinkedin className='w-5 h-5 text-blue-800' /> </span> <Link>Linkedin</Link></p>
                     </div>
                 </div>
             </div>
@@ -58,7 +61,7 @@ const Footer = () => {
                 <h1>&copy;2023 DreamPic
                     . All Rights Reserved</h1>
                 <h1>Powered by <span className="font-bold">
-                DreamPic
+                    DreamPic
                 </span></h1>
             </div>
         </footer>

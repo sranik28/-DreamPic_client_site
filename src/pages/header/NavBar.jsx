@@ -5,8 +5,7 @@ import { HiMenuAlt2, HiOutlineLightBulb } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
 import useDark from '../../hook/useDark';
 import { useAuthGlobally } from '../../context/AuthProvider';
-
-// import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.png'
 
 const NavBar = () => {
 
@@ -24,8 +23,8 @@ const NavBar = () => {
                 }
 
             </span>
-            <div className='flex items-center '>
-                {/* <img className='w-40' src={logo} alt="" /> */}
+            <div className='flex items-center gap-2'>
+                <img className='object-cover w-12 h-12' src={logo} alt="" />
                 <Link to='/'><h1 className='text-3xl font-bold'><span className='text-[#4c5696]'>Dream</span>Pic</h1></Link>
             </div>
 
