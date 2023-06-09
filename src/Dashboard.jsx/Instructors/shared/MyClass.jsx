@@ -10,7 +10,7 @@ const MyClass = () => {
                 <title>DreamPic | AddClass</title>
             </Helmet>
             <div className='my-20 '>
-                <h1 className='my-10 text-2xl font-bold '>My Classes</h1>
+                <h1 className='my-10 text-3xl font-bold '>My Classes</h1>
                 <section className='bg-white  h-[500px] mt-2 overflow-x-auto relative'>
                     <table className='w-full text-white'>
                         <thead >

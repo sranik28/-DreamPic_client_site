@@ -63,7 +63,7 @@ const AddClass = () => {
             <hr className="w-full my-3" />
             <form onSubmit={handleSubmit(addNewClass)} className="px-[100px] py-5" >
             <div className="my-3 text-center">
-                        <h2 className="text-2xl font-bold">Add New Class</h2>
+                        <h2 className="mb-10 text-3xl font-bold">Add New <span className="text-[#4c5696]">Class</span> </h2>
                     </div>      
 
                 <section className="w-full gap-3 md:grid md:grid-cols-2">

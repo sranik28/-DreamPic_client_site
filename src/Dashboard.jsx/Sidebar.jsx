@@ -15,7 +15,9 @@ const Sidebar = () => {
     const [role, setRole] = useState('instructor')
     return (
         <aside className="fixed top-0 bottom-0 h-screen p-10 shadow-2xl w-dashboard-md bg-[#1b1e34]">
+            <Link to='/'><h1 className="mb-10 text-2xl font-bold text-center text-white ">Dream<span className="text-[#4c5696]">Pic</span> </h1></Link>
             <div className="flex items-center justify-center gap-3 text-white">
+                
                 <Link to={`/dashboard/${role === "admin" ? "manage-class" : role === "instructor" ? "add-class" :  "my-select-class"}`} className="flex items-center gap-1 -ml-10">
                     {/* <img className="h-[50px]" src={logo} alt="" />  */}
                     <h3 className="text-2xl font-bold uppercase">{role}</h3>
@@ -44,7 +46,7 @@ const Sidebar = () => {
                 }
 
             </ul>
-            <button className="block px-6 py-3 mx-auto mt-48 text-white uppercase bg-black rounded-md"><Link to='/'>Home</Link></button>
+           
         </aside>
     );
 };
