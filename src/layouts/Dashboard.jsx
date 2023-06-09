@@ -11,8 +11,8 @@ const Dashboard = () => {
                 <title>DreamPic | Home</title>
             </Helmet>
             <Sidebar />
-            <main className="h-full md:absolute left-dashboard-md md:w-dashboard-body ">
-                <div className="max-w-[992px] mx-auto">
+            <main className="h-full  md:absolute left-dashboard-md md:w-dashboard-body">
+                <div className="w-full px-3 mx-auto">
                     <Outlet />
                 </div>
             </main>

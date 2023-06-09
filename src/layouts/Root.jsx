@@ -17,7 +17,7 @@ const Root = () => {
     }, [])
 
     return (
-        <div>
+        <div className='overflow-x-hidden'>
             <NavBar />
             <div className='md:min-h-[calc(100vh-100px)]'>
                 <Outlet />

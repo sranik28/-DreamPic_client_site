@@ -10,9 +10,9 @@ const Experience = () => {
                 <h1 className='text-4xl font-bold text-center md:text-6xl'>An experience <span className='text-[#4c5696]'>you'll never forget</span></h1>
                 <p className='my-3 text-xl text-center'>Delivered on our beautifully-crafted course portal.</p>
             </div>
-            <div className='gap-10 my-20 md:flex'>
+            <div className='items-center gap-10 my-20 md:flex'>
                 <div data-aos="fade-right">
-                    <h2 className='flex items-center mb-8 text-5xl font-bold md:mb-0'>Simple. <br /> Stunning. <br /> Convenient.</h2>
+                    <h2 className='flex mb-8 text-5xl font-bold md:mb-0'>Simple. <br /> Stunning. <br /> Convenient.</h2>
                 </div>
                 <div data-aos="fade-left">
                     <img className='rounded-md' src={experience} alt="" />

@@ -7,7 +7,7 @@ import { Pagination } from "swiper";
 const Banner = () => {
 
     return (
-        <div>
+        <div className='overflow-x-hidden'>
             <Swiper
                 spaceBetween={30}
                 pagination={{

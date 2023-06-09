@@ -18,7 +18,7 @@ const TopInstructor = () => {
                 <h2 className='text-4xl font-bold text-center md:text-6xl'>Our Most Valuable <span className='text-[#4c5696]'>Top Instructor</span></h2>
                 <p className='my-3 text-xl text-center'>The most important and respected people of our institute are the instructors</p>
             </div>
-            <div data-aos="zoom-out" className='grid grid-cols-1 gap-4 md:grid-cols-3'>
+            <div  className='grid grid-cols-1 gap-4 md:grid-cols-3'>
                 {
                     topInstructor.map((instructor, i) => <SingleInstructor key={i} instructor={instructor} />)
                 }

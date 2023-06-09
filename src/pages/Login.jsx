@@ -59,7 +59,7 @@ const Login = () => {
     }
 
     return (
-        <main className='flex items-center justify-center w-full md:h-[91.9vh] bg-[#1b1e34] px-3 '>
+        <main className='flex items-center justify-center w-full md:h-screen bg-[#1b1e34] px-3 '>
             <Helmet>
                 <title>DreamPic | Login</title>
             </Helmet>

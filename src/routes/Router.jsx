@@ -9,7 +9,7 @@ import Registration from "../pages/Registration";
 import Dashboard from "../layouts/Dashboard";
 import PrivateRouter from "../private/PrivateRoute";
 import AddClass from "../Dashboard.jsx/Instructors/shared/AddClass";
-import Table from "../Dashboard.jsx/Table";
+// import Table from "../Dashboard.jsx/Table";
 import MyClass from "../Dashboard.jsx/Instructors/shared/MyClass";
 import ManageClass from "../Dashboard.jsx/admin/shared/ManageClass";
 import ManageUser from "../Dashboard.jsx/admin/shared/ManageUser";
@@ -17,7 +17,7 @@ import MyEnrollClass from "../Dashboard.jsx/student/shared/MyEnrollClass";
 import MySelectClass from "../Dashboard.jsx/student/shared/MySelectClass";
 import Payment from "../Dashboard.jsx/student/shared/Payment";
 import PaymentHistory from "../Dashboard.jsx/student/shared/PaymentHistory";
-
+import Edit from "../Dashboard.jsx/Instructors/components/Edit";
 
 
 
@@ -62,6 +62,10 @@ const Router = createBrowserRouter([
             {
                 path: '/dashboard/my-class',
                 element: <MyClass />
+            },
+            {
+                path: '/dashboard/edit',
+                element: <Edit />
             },
             {
                 path: '/dashboard/manage-class',

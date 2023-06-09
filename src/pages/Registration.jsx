@@ -18,6 +18,7 @@ const Registration = () => {
     const {
         register,
         handleSubmit,
+        reset
     } = useForm();
 
     const handleRegister = (data) => {
@@ -29,7 +30,6 @@ const Registration = () => {
         const name = data.name;
         const email = data.email;
         const password = data.password;
-        // todo 
         const confirmPassword = data.confirmPassword;
         const photo = data.photo;
 
@@ -51,10 +51,10 @@ const Registration = () => {
         createUser(email, password)
             .then(result => {
                 const currentUser = result.user;
-
+                reset();
                 updateProfile(currentUser, { displayName: name, photoURL: photo })
-                // data.reset();
                 setSuccess("User has created successfully");
+                
             })
             .catch(error => {
 

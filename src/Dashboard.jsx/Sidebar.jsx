@@ -12,7 +12,7 @@ const Sidebar = () => {
     // const { role } = useAuthorization();
     const [isDark, setIsdark] = useState(null);
     useDark(isDark);
-    const [role, setRole] = useState('')
+    const [role, setRole] = useState('instructor')
     return (
         <aside className="fixed top-0 bottom-0 h-screen p-10 shadow-2xl w-dashboard-md bg-[#1b1e34]">
             <div className="flex items-center justify-center gap-3 text-white">
