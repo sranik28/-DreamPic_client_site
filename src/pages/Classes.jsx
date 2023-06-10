@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
+
 import ClassesCard from '../components/ClassesCard';
 import classesBanner from '../assets/class/classBanner.png'
+import { Helmet } from 'react-helmet-async';
 
 const Classes = () => {
 

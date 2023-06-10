@@ -28,7 +28,7 @@ const NavBar = () => {
                 <Link to='/'><h1 className='text-3xl font-bold'><span className='text-[#4c5696]'>Dream</span>Pic</h1></Link>
             </div>
 
-            <ul className={`font-semibold flex items-center duration-300 flex-col py-5 md:p-0 text-white bg-opacity-90 top-[11.3%] bg-black md:bg-transparent w-36 md:w-auto md:flex-row rounded-md   gap-6 absolute md:static z-50 ${toggle ? "top-0 left-0" : "-left-full duration-300"}`}>
+            <ul className={`font-semibold flex items-center duration-300 flex-col py-5 px-5 md:p-0 text-white bg-opacity-90 top-[13%] bg-black md:bg-transparent w-36 md:w-auto md:flex-row rounded-md   gap-6 absolute md:static z-50 ${toggle ? "top-0 left-0" : "-left-full duration-300"}`}>
                 <li>
                     <NavLink className={({ isActive }) => isActive ? "active" : ""} to="/">Home</NavLink>
                 </li>
@@ -38,9 +38,11 @@ const NavBar = () => {
                 <li>
                     <NavLink className={({ isActive }) => isActive ? "active" : ""} to="/classes">Classes</NavLink>
                 </li>
-                <li>
-                    <NavLink className={({ isActive }) => isActive ? "active" : ""} to="/dashboard">Dashboard </NavLink>
-                </li>
+                {
+                    user ? <li>
+                        <NavLink className={({ isActive }) => isActive ? "active" : ""} to="/dashboard">Dashboard </NavLink>
+                    </li> : <></>
+                }
                 <li>
                     {
                         user?.email ? <Link to='/login'><button onClick={logOut} className='px-5 py-2 bg-[#4c5696] rounded-md'>LogOut</button></Link> : <Link to='/login'><button onClick={logOut} className='px-5 py-2 bg-[#4c5696] rounded-md'>login</button></Link>

@@ -4,8 +4,9 @@ import { CiLogin } from 'react-icons/ci';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { Helmet } from 'react-helmet';
+
 import { useAuthGlobally } from '../context/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
 

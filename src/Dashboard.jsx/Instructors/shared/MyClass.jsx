@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { AiFillEdit } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 
@@ -11,7 +11,7 @@ const MyClass = () => {
             </Helmet>
             <div className='my-20 '>
                 <h1 className='my-10 text-3xl font-bold '>My Classes</h1>
-                <section className='bg-white  h-[500px] mt-2 overflow-x-auto relative'>
+                <section className='  h-[500px] mt-2 overflow-x-auto relative'>
                     <table className='w-full text-white'>
                         <thead >
                             <tr className='bg-[#1b1e34]  sticky top-0 px-10'>

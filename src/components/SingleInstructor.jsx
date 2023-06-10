@@ -2,7 +2,6 @@ import React from 'react';
 
 const SingleInstructor = ({ instructor }) => {
 
-    console.log(instructor)
     const { name, email, image } = instructor;
 
     return (

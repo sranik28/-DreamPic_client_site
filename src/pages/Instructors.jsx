@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
 import InstructorCard from '../components/InstructorCard';
 import instructorBanner from '../assets/Instructors/FX30-Desktop_Banner_1600x641_q91iWY6_cleanup.png';
+import { Helmet } from 'react-helmet-async';
 
 const Instructors = () => {
 

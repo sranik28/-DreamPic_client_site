@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
-import RegistrationImg from '../assets/registion/high-angle-shot-lens-headphones-gimbal-phone.jpg'
 import { useAuthGlobally } from '../context/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import { FcGoogle } from 'react-icons/fc';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
+
 
 const Registration = () => {
 

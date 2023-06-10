@@ -2,7 +2,8 @@ import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
 import useAxiosSecure from "../../../hook/useAxiosSecure";
 import { useAuthGlobally } from "../../../context/AuthProvider";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
+
 
 
 

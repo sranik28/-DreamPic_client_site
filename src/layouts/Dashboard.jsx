@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 import Sidebar from '../Dashboard.jsx/Sidebar';
+import { Helmet } from 'react-helmet-async';
 
 
 const Dashboard = () => {

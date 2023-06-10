@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { BsTrash3Fill } from "react-icons/bs";
 
 const ManageUser = () => {
@@ -8,6 +8,7 @@ const ManageUser = () => {
             <Helmet>
                 <title>DreamPic | Manage User</title>
             </Helmet>
+            <h2 className='my-10 text-3xl font-bold'>Manage User:</h2>
             <section className='  h-[500px] mt-2 overflow-x-auto relative'>
                 <table className='w-full text-white'>
                     <thead >
