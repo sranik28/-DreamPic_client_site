@@ -43,16 +43,16 @@ const MySelectClass = () => {
     return (
         <div>
             <div className='flex items-center justify-between'>
-                <h1 className='my-10 text-3xl font-bold'>Select Class:</h1>
+                <h1 className='my-10 text-3xl font-bold'>Select Class:{selectedClasses.length} </h1>
                 <Link to='/dashboard/payment'>
                     <button className='bg-[#1b1e34] font-semibold px-6 py-2 rounded-md text-white'>Pay</button>
                 </Link>
             </div>
             <div className='max-w-[1240px] mx-auto'>
                 <section className='  h-[500px] mt-2 overflow-x-auto relative'>
-                    <table className='w-full text-white'>
+                    <table className='w-full '>
                         <thead >
-                            <tr className='bg-[#1b1e34]  sticky top-0 px-10'>
+                            <tr className='bg-[#1b1e34]  text-white sticky top-0 px-10'>
                                 <th className='py-3'></th>
                                 <th className='py-3 uppercase'>Class Image</th>
                                 <th className='py-3 uppercase'>Class Name</th>

@@ -69,10 +69,10 @@ const ManageClass = () => {
                 </form>
             </div>
             <section className='  h-[500px] mt-2 overflow-x-auto relative'>
-                <h2 className='my-10 text-3xl font-bold'>Manage Class:</h2>
+                <h2 className='my-10 text-3xl font-bold'>Manage Class:{classes.length} </h2>
                 <table className='w-full '>
-                    <thead >
-                    <th className='py-3'></th>
+                    <thead className='bg-[#1b1e34] text-white'>
+                    <th className='py-3 ' ></th>
                             <th className='py-3 lowercase'>CLASS IMAGE</th>
                             <th className='py-3 lowercase'>CLASS NAME</th>
                             <th className='py-3 lowercase'>INSTRUCTOR EMAIL</th>

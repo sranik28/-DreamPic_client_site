@@ -1,7 +1,10 @@
 import React from 'react';
+import useAuthorization from '../hook/useAuthorization';
+
+
 
 const ClassesCard = ({ classes, seletedClass }) => {
-
+    const { role } = useAuthorization()
     const { student_enroll,
         class_image,
         class_name,
@@ -25,7 +28,7 @@ const ClassesCard = ({ classes, seletedClass }) => {
                 <p className='mb-1'><span className='text-lg font-semibold'>Student Enroll</span>: {student_enroll}</p>
                 <p className='mb-1'><span className='text-lg font-semibold'>Class Fee</span>: ${price}</p>
             </div>
-            <button onClick={() => seletedClass(classes)} disabled={avilable_seats === 0} className={`bg-[#4c5696] w-full mx-auto py-2 rounded-md text-white ${avilable_seats === 0
+            <button onClick={() => seletedClass(classes)} disabled={avilable_seats === 0 || role === 'admin' || role === 'instructor'} className={`bg-[#4c5696] w-full mx-auto py-2 rounded-md text-white ${avilable_seats === 0
                 ? 'bg-[#20243a]' : 'bg-[#4c5696]'} `}>{avilable_seats === 0
                     ? 'No seats available' : 'Enroll'}</button>
         </div>

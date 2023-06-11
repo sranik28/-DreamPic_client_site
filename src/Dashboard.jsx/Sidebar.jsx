@@ -14,7 +14,7 @@ const Sidebar = () => {
     const { role } = useAuthorization();
     const [isDark, setIsdark] = useState(null);
     useDark(isDark);
-    // const [role, setRole] = useState('admin')
+
     return (
         <aside className="fixed top-0 bottom-0 h-screen p-10 shadow-2xl w-dashboard-md bg-[#1b1e34]">
             <div className="flex items-center justify-center gap-3 mb-10">
@@ -34,18 +34,18 @@ const Sidebar = () => {
 
                 {
                     role === "admin" ? <>
-                        <li className="mt-4 font-bold"><NavLink to="/dashboard/manage-class" className={({ isActive }) => isActive ? "d-active flex gap-2 text-[16px] items-center text-black uppercase " : " flex gap-2 text-[16px] items-center"}> <MdOutlineManageHistory /> <span>Manage Classes</span></NavLink></li>
-                        <li className="mt-4 font-bold"><NavLink to="/dashboard/manage-users" className={({ isActive }) => isActive ? "d-active flex gap-2 text-[16px] items-center text-black uppercase" : " flex gap-2 text-[16px] items-center"}> <MdManageAccounts /> <span>Manage Users</span></NavLink></li>
+                        <li className="mt-4 font-bold"><NavLink to="/dashboard/manage-class" className={({ isActive }) => isActive ? "d-active flex gap-2 text-[16px] items-center  " : " flex gap-2 text-[16px] items-center text-black uppercase"}> <MdOutlineManageHistory /> <span>Manage Classes</span></NavLink></li>
+                        <li className="mt-4 font-bold"><NavLink to="/dashboard/manage-users" className={({ isActive }) => isActive ? "d-active flex gap-2 text-[16px] items-center " : " flex gap-2 text-[16px] items-center text-black uppercase"}> <MdManageAccounts /> <span>Manage Users</span></NavLink></li>
                     </>
                         :
                         role === "instructor" ? <>
-                            <li className="mt-4 font-bold"><NavLink to="/dashboard/add-class" className={({ isActive }) => isActive ? "d-active flex gap-2 text-[16px] items-center text-black uppercase " : " flex gap-2 text-[16px] items-center"}> <BiBookAdd /> <span>Add Class</span></NavLink></li>
-                            <li className="mt-4 font-bold"><NavLink to="/dashboard/my-class" className={({ isActive }) => isActive ? "d-active flex gap-2 text-[16px] items-center text-black uppercase " : " flex gap-2 text-[16px] items-center"}> <MdOutlineClass /> <span>My Classes</span></NavLink></li>
+                            <li className="mt-4 font-bold"><NavLink to="/dashboard/add-class" className={({ isActive }) => isActive ? "d-active flex gap-2 text-[16px] items-center  " : "text-black uppercase flex gap-2 text-[16px] items-center"}> <BiBookAdd /> <span>Add Class</span></NavLink></li>
+                            <li className="mt-4 font-bold"><NavLink to="/dashboard/my-class" className={({ isActive }) => isActive ? "d-active flex gap-2 text-[16px] items-center  " : "text-black uppercase flex gap-2 text-[16px] items-center"}> <MdOutlineClass /> <span>My Classes</span></NavLink></li>
                         </> :
                             <>
-                                <li className="mt-4 font-bold"><NavLink to="/dashboard/payment-history" className={({ isActive }) => isActive ? "d-active flex gap-2 text-[16px] items-center text-black uppercase" : " flex gap-2 text-[16px] items-center"}> <MdPayments /> <span>Payment History</span></NavLink></li>
-                                <li className="mt-4 font-bold"><NavLink to="/dashboard/my-select-class" className={({ isActive }) => isActive ? "d-active flex gap-2 text-[16px] items-center text-black uppercase " : "flex gap-2 text-[16px] items-center"}> <GrCheckboxSelected /><span>Selected Classes</span></NavLink></li>
-                                <li className="mt-4 font-bold"><NavLink to="/dashboard/my-enroll-class" className={({ isActive }) => isActive ? "d-active flex gap-2 text-[16px] items-center text-black uppercase" : " flex gap-2 text-[16px] items-center"}> <MdAttachMoney className="w-5 h-5" /> <span>Enrolled Classes</span></NavLink></li>
+                                <li className="mt-4 font-bold"><NavLink to="/dashboard/payment-history" className={({ isActive }) => isActive ? "d-active flex gap-2 text-[16px] items-center " : "text-black uppercase flex gap-2 text-[16px] items-center"}> <MdPayments /> <span>Payment History</span></NavLink></li>
+                                <li className="mt-4 font-bold"><NavLink to="/dashboard/my-select-class" className={({ isActive }) => isActive ? "d-active flex gap-2 text-[16px] items-center  " : "text-black uppercase flex gap-2 text-[16px] items-center"}> <GrCheckboxSelected /><span>Selected Classes</span></NavLink></li>
+                                <li className="mt-4 font-bold"><NavLink to="/dashboard/my-enroll-class" className={({ isActive }) => isActive ? "d-active flex gap-2 text-[16px] items-center " : "text-black uppercase flex gap-2 text-[16px] items-center"}> <MdAttachMoney className="w-5 h-5" /> <span>Enrolled Classes</span></NavLink></li>
                             </>
                 }
 

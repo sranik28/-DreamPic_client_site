@@ -11,8 +11,8 @@ import Swal from 'sweetalert2';
 const Classes = () => {
     useTitle('Classes')
 
+    
     const { classes } = useClasses('Approved');
-    useTitle("Classes")
     const {user} = useAuthGlobally()
     const navigate = useNavigate()
     const {axiosSecure} = useAxiosSecure()
