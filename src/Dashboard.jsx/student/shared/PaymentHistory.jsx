@@ -1,15 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import useTitle from '../../../hook/useHook';
 
 
 
 const PaymentHistory = () => {
+    useTitle('PaymentHistory')
     return (
         <div>
-            <Helmet>
-                <title>DreamPic | Payment History</title>
-            </Helmet>
-            <div className='max-w-[1240px] mx-auto my-10'>
+            <div className='max-w-[1240px] mx-auto my-20'>
                 <section className='  h-[500px] mt-2 overflow-x-auto relative'>
                     <table className='w-full text-white'>
                         <thead >

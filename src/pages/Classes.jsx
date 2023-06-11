@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-
 import ClassesCard from '../components/ClassesCard';
 import classesBanner from '../assets/class/classBanner.png'
-import { Helmet } from 'react-helmet-async';
+import useTitle from '../hook/useHook';
 
 const Classes = () => {
+    useTitle('Classes')
 
     const [AllClass, setAllClass] = useState([]);
     useEffect(() => {
@@ -22,9 +22,6 @@ const Classes = () => {
                 </div>
             </div>
             <div className='max-w-[1240px] mx-auto my-20'>
-                <Helmet>
-                    <title>DreamPic | Classes</title>
-                </Helmet>
 
                 <div className='grid gap-4 md:grid-cols-3'>
                     {

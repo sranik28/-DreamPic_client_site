@@ -1,5 +1,5 @@
 const useTitle = (title) => {
-    document.title = title + " | " + "GameFrenzy"  
+    document.title = "DreamPic" + " | " + title
 };
 
 export default useTitle;

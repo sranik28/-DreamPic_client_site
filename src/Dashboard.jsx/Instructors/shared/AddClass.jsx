@@ -2,12 +2,13 @@ import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
 import useAxiosSecure from "../../../hook/useAxiosSecure";
 import { useAuthGlobally } from "../../../context/AuthProvider";
-import { Helmet } from "react-helmet-async";
+import useTitle from "../../../hook/useHook";
 
 
 
 
 const AddClass = () => {
+    useTitle('AddClass')
     const {register, handleSubmit} = useForm();
     const {user} = useAuthGlobally();
     const {axiosSecure} = useAxiosSecure();
@@ -58,9 +59,6 @@ const AddClass = () => {
    
     return (
         <main>
-            <Helmet>
-                <title>DreamPic | AddClass</title>
-            </Helmet>
             <hr className="w-full my-3" />
             <form onSubmit={handleSubmit(addNewClass)} className="px-[100px] py-5" >
             <div className="my-3 text-center">

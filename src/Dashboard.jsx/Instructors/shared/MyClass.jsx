@@ -1,14 +1,12 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { AiFillEdit } from "react-icons/ai";
 import { Link } from 'react-router-dom';
+import useTitle from '../../../hook/useHook';
 
 const MyClass = () => {
+    useTitle("MyClass")
     return (
         <div>
-            <Helmet>
-                <title>DreamPic | AddClass</title>
-            </Helmet>
             <div className='my-20 '>
                 <h1 className='my-10 text-3xl font-bold '>My Classes</h1>
                 <section className='  h-[500px] mt-2 overflow-x-auto relative'>

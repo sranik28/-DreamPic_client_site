@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import InstructorCard from '../components/InstructorCard';
 import instructorBanner from '../assets/Instructors/FX30-Desktop_Banner_1600x641_q91iWY6_cleanup.png';
-import { Helmet } from 'react-helmet-async';
+import useTitle from '../hook/useHook';
+
 
 const Instructors = () => {
+    useTitle('Instructors')
 
     const [instructor, setTopInstructor] = useState([]);
 
@@ -23,9 +25,6 @@ const Instructors = () => {
                 </div>
             </div>
             <div className='max-w-[1240px] mx-auto my-20'>
-                <Helmet>
-                    <title>DreamPic | Instructors</title>
-                </Helmet>
 
                 <div className='grid gap-5 m md:grid-cols-4'>
                     {

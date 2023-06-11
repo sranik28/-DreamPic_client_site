@@ -13,17 +13,20 @@ const ClientList = () => {
     return (
         <div className='my-20'>
             <div>
+                <div className='border-indigo-500 border-x-4 max-w-[1240px] mx-auto'>
+                    <h2 className='mb-20 text-4xl font-bold text-center md:text-6xl'>Our <span className='text-[#4c5696]'>sponsor</span> </h2>
+                </div>
                 <div>
                     <div className='flex items-center gap-5 mx-auto '>
                         <Marquee>
                             <img src={brand1} alt="" />
                             <img src={brand2} alt="" />
-                            <img src={brand3}alt="" />
-                            <img src={brand4}alt="" />
-                            <img src={brand5}alt="" />
-                            <img src={brand6}alt="" />
-                            <img src={brand7}alt="" />
-                            <img src={brand8}alt="" />
+                            <img src={brand3} alt="" />
+                            <img src={brand4} alt="" />
+                            <img src={brand5} alt="" />
+                            <img src={brand6} alt="" />
+                            <img src={brand7} alt="" />
+                            <img src={brand8} alt="" />
 
                         </Marquee>
                     </div>

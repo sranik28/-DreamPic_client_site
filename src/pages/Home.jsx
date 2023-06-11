@@ -6,16 +6,16 @@ import TopCourses from '../components/TopCourses ';
 import TopInstructor from '../components/TopInstructor';
 import VideoSection from '../components/VideoSection';
 import ClientList from '../components/ClientList';
-import { Helmet } from 'react-helmet-async';
+import useTitle from '../hook/useHook';
+
 
 
 
 const Home = () => {
+    useTitle('Home')
     return (
         <div>
-            <Helmet>
-                <title>DreamPic | Home</title>
-            </Helmet>
+
             <Banner />
             <Experience />
             <TopCourses />

@@ -1,14 +1,18 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { BsTrash3Fill } from 'react-icons/bs';
+import useTitle from '../../../hook/useHook';
+import { Link } from 'react-router-dom';
 
 const MySelectClass = () => {
+    useTitle("MySelectClass")
     return (
         <div>
-            <Helmet>
-                <title>DreamPic | My Select Class</title>
-            </Helmet>
-            <h1 className='my-10 text-3xl font-bold'>Select Class:</h1>
+            <div className='flex items-center justify-between'>
+                <h1 className='my-10 text-3xl font-bold'>Select Class:</h1>
+                <Link to='/dashboard/payment'>
+                    <button className='bg-[#1b1e34] font-semibold px-6 py-2 rounded-md text-white'>Pay</button>
+                </Link>
+            </div>
             <div className='max-w-[1240px] mx-auto'>
                 <section className='  h-[500px] mt-2 overflow-x-auto relative'>
                     <table className='w-full text-white'>

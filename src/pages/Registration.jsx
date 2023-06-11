@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import { useAuthGlobally } from '../context/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import { FcGoogle } from 'react-icons/fc';
-import { Helmet } from 'react-helmet-async';
+import useTitle from '../hook/useHook';
 
 
 const Registration = () => {
-
+    useTitle('Registration')
     const { createUser, signInGoogle } = useAuthGlobally();
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
@@ -54,7 +54,7 @@ const Registration = () => {
                 reset();
                 updateProfile(currentUser, { displayName: name, photoURL: photo })
                 setSuccess("User has created successfully");
-                
+
             })
             .catch(error => {
 
@@ -76,9 +76,6 @@ const Registration = () => {
 
     return (
         <main>
-             <Helmet>
-                <title>DreamPic | Registration</title>
-            </Helmet>
             <div className='max-w-[1240px] mx-auto   '>
                 <h1 className='mt-20 text-5xl font-bold text-center '>Please Registration</h1>
                 <form onSubmit={handleSubmit(handleRegister)} className='text-center py-5  rounded md:w-[500px]  mx-auto my-5'>
@@ -97,7 +94,7 @@ const Registration = () => {
                         <Link to="/login" className="px-2 py-1 ml-2 text-[#B2A4FF] underline    rounded">Login</Link>
                     </div>
                 </form>
-                    <button onClick={handelGoogle} className='p-[10px] border rounded flex justify-center items-center gap-[6px] mx-auto   '><FcGoogle className='text-[32px]' /><span className=''>Continue with Google</span></button>
+                <button onClick={handelGoogle} className='p-[10px] border rounded flex justify-center items-center gap-[6px] mx-auto   '><FcGoogle className='text-[32px]' /><span className=''>Continue with Google</span></button>
             </div>
         </main>
     );

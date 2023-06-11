@@ -33,9 +33,22 @@ const AuthProvider = ({ children }) => {
         return signOut(auth)
     }
 
-    useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, currentUser => {
-            setUser(currentUser)
+    useEffect(()=> {
+        const unsubscribe = onAuthStateChanged(auth, correntUser => {
+            setUser(correntUser)
+            if(correntUser) {
+                fetch(`https://dream-pic.vercel.app/jwt?email=${correntUser.email}`,
+                {
+                    method: "POST"
+                })
+                .then(res => res.json())
+                .then(data => {
+                    localStorage.setItem("access-token", data.token)
+                })
+            }
+            else {
+                localStorage.removeItem("access-token")
+            }
             setLoading(false)
         })
         return () => {
@@ -59,6 +72,6 @@ const AuthProvider = ({ children }) => {
 
 const useAuthGlobally = () => {
     return useContext(CreateAuth)
-}
+} 
 
 export { AuthProvider, useAuthGlobally };

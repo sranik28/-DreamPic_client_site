@@ -1,13 +1,12 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { BsTrash3Fill } from "react-icons/bs";
+import useTitle from '../../../hook/useHook';
 
 const ManageUser = () => {
+    useTitle('ManageUser')
     return (
         <div className='max-w-[1240px] mx-auto my-10'>
-            <Helmet>
-                <title>DreamPic | Manage User</title>
-            </Helmet>
+
             <h2 className='my-10 text-3xl font-bold'>Manage User:</h2>
             <section className='  h-[500px] mt-2 overflow-x-auto relative'>
                 <table className='w-full text-white'>

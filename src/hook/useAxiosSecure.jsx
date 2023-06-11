@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect } from "react";
 
 const axiosSecure = axios.create({
-    baseURL: "http://localhost:9999"
+    baseURL: "https://dream-pic.vercel.app"
 })
 
 const useAxiosSecure = () => {

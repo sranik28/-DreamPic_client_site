@@ -1,14 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import useTitle from '../../../hook/useHook';
+
 
 
 
 const MyEnrollClass = () => {
+    useTitle('MyEnrollClass')
     return (
         <div>
-            <Helmet>
-                <title>DreamPic | My Enroll Class</title>
-            </Helmet>
             <h1 className='my-10 text-3xl font-bold'>Enroll Class:</h1>
             <div className='max-w-[1240px] mx-auto'>
                 <section className=' h-[500px] mt-2 overflow-x-auto relative'>

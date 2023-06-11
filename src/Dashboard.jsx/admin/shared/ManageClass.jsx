@@ -1,13 +1,11 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { BsTrash3Fill } from "react-icons/bs";
+import useTitle from '../../../hook/useHook';
 
 const ManageClass = () => {
+    useTitle('ManageClass')
     return (
         <div>
-            <Helmet>
-                <title>DreamPic | Manage Class</title>
-            </Helmet>
             <section className='  h-[500px] mt-2 overflow-x-auto relative'>
                 <h2 className='my-10 text-3xl font-bold'>Manage Class:</h2>
                 <table className='w-full text-white'>
@@ -17,8 +15,7 @@ const ManageClass = () => {
                             <th className='py-3'>CLASS IMAGE</th>
                             <th className='py-3'>CLASS NAME</th>
                             <th className='py-3 uppercase'>instructor email</th>
-                            <th classN
-                                ame='py-3 uppercase'>Instructor Email</th>
+                           
                             <th className='py-3 uppercase'>Available seats</th>
                             <th className='py-3 uppercase'>Price</th>
                             <th className='py-3 uppercase'>Action</th>
@@ -33,7 +30,7 @@ const ManageClass = () => {
                             <td className="py-2 text-center">Category</td>
                             <td className="py-2 text-center">$price</td>
                             <td className="py-2 text-center">$price</td>
-                            <td className="py-2 text-center">$price</td>
+                            
                             <td className="py-2"><button className="bg-[#B91C1C] p-3 rounded text-white block mx-auto"><BsTrash3Fill /></button></td>
                         </tr>
 
