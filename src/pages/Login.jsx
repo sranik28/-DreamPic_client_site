@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useAuthGlobally } from '../context/AuthProvider';
 import useTitle from '../hook/useHook';
+import Swal from 'sweetalert2';
 
 
 const Login = () => {
@@ -48,15 +49,32 @@ const Login = () => {
             })
     }
 
+
     const handelGoogle = () => {
         signInGoogle()
             .then((result) => {
-                const google = result.user;
-                console.log(google)
+                const user = {
+                    name: result?.user?.displayName,
+                    email: result?.user?.email,
+                    photo_url: result?.user?.photoURL
+                }
+
+
+                axiosSecure.put(`/add-user?email=${user?.email}`, user)
+                    .then(res => {
+                        if (res.data) {
+                            Swal.fire({
+                                position: 'center',
+                                icon: 'success',
+                                title: 'Login sucessfull',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+                        }
+                    })
                 navigate(from)
             })
             .catch((error) => {
-                console.log(error.message)
             })
     }
 

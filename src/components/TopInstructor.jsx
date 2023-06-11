@@ -1,16 +1,20 @@
 import { useEffect, useState } from 'react';
 import SingleInstructor from './SingleInstructor';
+import useAxiosSecure from '../hook/useAxiosSecure';
+import { useQuery } from 'react-query';
 
 const TopInstructor = () => {
 
-    const [topInstructor, setTopInstructor] = useState([]);
+   
 
-    useEffect(() => {
-        fetch('http://localhost:9999/instructor')
-            .then(res => res.json())
-            .then(data => setTopInstructor(data))
-
-    }, [])
+    const {axiosSecure} = useAxiosSecure()
+    const {data: instructors = []} = useQuery({
+        queryKey: ["popular-instructor"],
+        queryFn: async () => {
+            const res = await axiosSecure.get("/popular-instructors")
+            return res.data
+        }
+    })
 
     return (
         <div className='max-w-[1240px] mx-auto my-10 px-3'>
@@ -20,7 +24,7 @@ const TopInstructor = () => {
             </div>
             <div  className='grid grid-cols-1 gap-4 md:grid-cols-3'>
                 {
-                    topInstructor.map((instructor, i) => <SingleInstructor key={i} instructor={instructor} />)
+                    instructors.map((instructor, i) => <SingleInstructor key={i} instructor={instructor} />)
                 }
             </div>
         </div>
