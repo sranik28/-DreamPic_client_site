@@ -1,19 +1,14 @@
-import { useEffect, useState } from 'react';
+
 import InstructorCard from '../components/InstructorCard';
 import instructorBanner from '../assets/Instructors/FX30-Desktop_Banner_1600x641_q91iWY6_cleanup.png';
 import useTitle from '../hook/useHook';
+import useInstructors from '../hook/useIntructors';
 
 
 const Instructors = () => {
     useTitle('Instructors')
 
-    const [instructor, setTopInstructor] = useState([]);
-
-    useEffect(() => {
-        fetch('http://localhost:9999/all-instructor')
-            .then(res => res.json())
-            .then(data => setTopInstructor(data))
-    }, [])
+    const { instructors } = useInstructors();
 
     return (
         <div>
@@ -28,7 +23,7 @@ const Instructors = () => {
 
                 <div className='grid gap-5 m md:grid-cols-4'>
                     {
-                        instructor.map(ins => <InstructorCard key={ins._id} instructor={ins} />)
+                        instructors.map(ins => <InstructorCard key={ins._id} instructor={ins} />)
                     }
                 </div>
             </div>

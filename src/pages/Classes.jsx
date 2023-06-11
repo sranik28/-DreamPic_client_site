@@ -2,16 +2,13 @@ import { useEffect, useState } from 'react';
 import ClassesCard from '../components/ClassesCard';
 import classesBanner from '../assets/class/classBanner.png'
 import useTitle from '../hook/useHook';
+import useClasses from '../hook/useClasses';
 
 const Classes = () => {
     useTitle('Classes')
 
-    const [AllClass, setAllClass] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:9999/classes')
-            .then(res => res.json())
-            .then(data => setAllClass(data))
-    }, [])
+    const { classes } = useClasses('Approved');
+
     return (
         <div className=''>
             <div className='relative'>
@@ -25,7 +22,7 @@ const Classes = () => {
 
                 <div className='grid gap-4 md:grid-cols-3'>
                     {
-                        AllClass.map(classes => <ClassesCard key={classes._id} classes={classes} />)
+                        classes.map(classes => <ClassesCard key={classes._id} classes={classes} />)
                     }
                 </div>
             </div>

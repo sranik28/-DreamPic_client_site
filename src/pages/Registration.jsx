@@ -5,6 +5,8 @@ import { useAuthGlobally } from '../context/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import { FcGoogle } from 'react-icons/fc';
 import useTitle from '../hook/useHook';
+import Swal from 'sweetalert2';
+import useAxiosSecure from '../hook/useAxiosSecure';
 
 
 const Registration = () => {
@@ -12,7 +14,7 @@ const Registration = () => {
     const { createUser, signInGoogle } = useAuthGlobally();
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
-
+    const { axiosSecure } = useAxiosSecure()
 
 
     const {
@@ -65,12 +67,28 @@ const Registration = () => {
     const handelGoogle = () => {
         signInGoogle()
             .then((result) => {
-                const google = result.user;
-                console.log(google)
+                const user = {
+                    name: result?.user?.displayName,
+                    email: result?.user?.email,
+                    photo_url: result?.user?.photoURL
+                }
+
+
+                axiosSecure.put(`/add-user?email=${user?.email}`, user)
+                    .then(res => {
+                        if (res.data) {
+                            Swal.fire({
+                                position: 'center',
+                                icon: 'success',
+                                title: 'Login sucessfull',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+                        }
+                    })
                 navigate(from)
             })
             .catch((error) => {
-                console.log(error.message)
             })
     }
 
