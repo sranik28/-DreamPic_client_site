@@ -51,7 +51,7 @@ const Login = () => {
             })
     }
 
-// todo: add google login
+
     const handelGoogle = () => {
         signInGoogle()
             .then((result) => {

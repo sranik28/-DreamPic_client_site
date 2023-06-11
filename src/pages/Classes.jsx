@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import ClassesCard from '../components/ClassesCard';
 import classesBanner from '../assets/class/classBanner.png'
 import useTitle from '../hook/useHook';
@@ -11,7 +10,6 @@ import Swal from 'sweetalert2';
 const Classes = () => {
     useTitle('Classes')
 
-    
     const { classes } = useClasses('Approved');
     const {user} = useAuthGlobally()
     const navigate = useNavigate()
@@ -61,7 +59,7 @@ const Classes = () => {
     }
 
     return (
-        <div className=''>
+        <div>
             <div className='relative'>
                 <img className='object-cover h-[450px] w-full' src={classesBanner} alt="" />
                 <div className='absolute top-0 left-0 w-full h-full text-white bg-black/50'>

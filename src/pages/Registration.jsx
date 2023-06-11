@@ -14,7 +14,7 @@ const Registration = () => {
     const { createUser, signInGoogle } = useAuthGlobally();
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
-    const { axiosSecure } = useAxiosSecure()
+    const { axiosSecure } = useAxiosSecure();
 
 
     const {
