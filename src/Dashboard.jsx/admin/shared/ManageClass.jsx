@@ -1,38 +1,91 @@
 import React from 'react';
-import { BsTrash3Fill } from "react-icons/bs";
 import useTitle from '../../../hook/useHook';
+import useClasses from '../../../hook/useClasses';
+import useAxiosSecure from '../../../hook/useAxiosSecure';
+import Swal from 'sweetalert2';
+import { useState } from 'react';
+import ManageClassCard from '../components/ManageClassCard';
+
 
 const ManageClass = () => {
     useTitle('ManageClass')
+
+
+    const { classes, refetch } = useClasses("all")
+    const [isOpen, setIsOpen] = useState(false)
+    const [id, setId] = useState(null)
+    const { axiosSecure } = useAxiosSecure()
+    const updateStatus = async (status, id) => {
+        const res = await axiosSecure.put(`/change-class-status/${id}`, { status })
+        if (res.data.modifiedCount > 0) {
+            refetch()
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Status Has Updated',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+
+    }
+    const sendFeedback = (e) => {
+        e.preventDefault()
+
+        if (e.target.feed.value) {
+            axiosSecure.put(`/send-feedback/${id}`, { feedback: e.target.feed.value })
+
+                .then(res => {
+
+                    if (res.data.modifiedCount > 0) {
+                        Swal.fire({
+                            position: 'center',
+                            icon: 'success',
+                            title: 'Feedback Has been Sent',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                    }
+                })
+            e.target.reset()
+            setIsOpen(false)
+        }
+    }
+
+    const openFeed = (id) => {
+        setIsOpen(true)
+        setId(id)
+    }
+
     return (
         <div>
+            <div className={`${isOpen ? "" : "hidden"} p-4 max-w-[700px] h-[300px] shadow-lg fixed z-[111111] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  rounded bg-white`}>
+                <form onSubmit={sendFeedback}>
+                    <textarea required name='feed' placeholder='write your feedback' className='w-full h-[220px] text-black bg-white resize-none outline-0 border-2 p-4 rounded'></textarea>
+                    <div className='flex justify-center gap-3'>
+                        <button className='px-4 py-2 text-white rounded bg-main'>Send</button>
+                        <div onClick={() => setIsOpen(false)} className='px-4 py-2 text-white rounded cursor-pointer '>close</div>
+                    </div>
+                </form>
+            </div>
             <section className='  h-[500px] mt-2 overflow-x-auto relative'>
                 <h2 className='my-10 text-3xl font-bold'>Manage Class:</h2>
-                <table className='w-full text-white'>
+                <table className='w-full '>
                     <thead >
-                        <tr className='bg-[#1b1e34]  sticky top-0 px-10'>
-                            <th className='py-3'></th>
-                            <th className='py-3'>CLASS IMAGE</th>
-                            <th className='py-3'>CLASS NAME</th>
-                            <th className='py-3 uppercase'>instructor email</th>
-                           
-                            <th className='py-3 uppercase'>Available seats</th>
-                            <th className='py-3 uppercase'>Price</th>
-                            <th className='py-3 uppercase'>Action</th>
-                        </tr>
+                    <th className='py-3'></th>
+                            <th className='py-3 lowercase'>CLASS IMAGE</th>
+                            <th className='py-3 lowercase'>CLASS NAME</th>
+                            <th className='py-3 lowercase'>INSTRUCTOR EMAIL</th>
+                            <th className='py-3 lowercase'>INSTRUCTOR NAME</th>
+                            <th className='py-3 lowercase'>AVAILAVLE SEATS</th>
+                            <th className='py-3 lowercase'>PRICE</th>
+                            <th className='py-3 lowercase'>ACTION</th>
                     </thead>
                     <tbody >
+                        {
+                            classes && classes.map((singleClass, i) => <ManageClassCard key={singleClass._id} updateStatus={updateStatus} openFeed={openFeed} i={i} singleClass={singleClass} />)
+                        }
 
-                        <tr className="border-b-2 text-[#737373]">
-                            <td className="py-2 text-center text-[#151515] font-bold">1</td>
-                            <td className="py-2"><img className="h-[75px] w-[75px] object-cover mx-auto" src='https://i.ibb.co/zSf4QdG/licensed-image-3.jpg' alt="" /></td>
-                            <td className="py-2 text-center">item_name</td>
-                            <td className="py-2 text-center">Category</td>
-                            <td className="py-2 text-center">$price</td>
-                            <td className="py-2 text-center">$price</td>
-                            
-                            <td className="py-2"><button className="bg-[#B91C1C] p-3 rounded text-white block mx-auto"><BsTrash3Fill /></button></td>
-                        </tr>
 
                     </tbody>
                 </table>

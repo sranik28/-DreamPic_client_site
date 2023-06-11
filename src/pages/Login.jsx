@@ -7,13 +7,14 @@ import { useForm } from 'react-hook-form';
 import { useAuthGlobally } from '../context/AuthProvider';
 import useTitle from '../hook/useHook';
 import Swal from 'sweetalert2';
+import useAxiosSecure from '../hook/useAxiosSecure';
 
 
 const Login = () => {
     useTitle('Login')
 
     const [showPassword, setShowPassword] = useState(false)
-
+    const { axiosSecure } = useAxiosSecure()
 
     const { signIn, signInGoogle } = useAuthGlobally();
     const navigate = useNavigate();
@@ -26,6 +27,7 @@ const Login = () => {
     const {
         register,
         handleSubmit,
+        reset
     } = useForm();
 
     const handleLogin = (data) => {
@@ -42,14 +44,14 @@ const Login = () => {
         signIn(email, password)
             .then(() => {
                 navigate(from, { replace: true })
-                form.reset()
+                reset()
             })
             .catch(error => {
                 setError(error.message)
             })
     }
 
-
+// todo: add google login
     const handelGoogle = () => {
         signInGoogle()
             .then((result) => {

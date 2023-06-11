@@ -1,9 +1,59 @@
 import React from 'react';
-import { BsTrash3Fill } from "react-icons/bs";
 import useTitle from '../../../hook/useHook';
+import Swal from 'sweetalert2';
+import useAxiosSecure from '../../../hook/useAxiosSecure';
+import useUsers from '../../../hook/useUsers';
+import ManageUserCard from '../components/ManageUserCard';
+
 
 const ManageUser = () => {
-    useTitle('ManageUser')
+
+    useTitle("Manage Users")
+
+    const { refetch, users } = useUsers();
+    const { axiosSecure } = useAxiosSecure();
+    const updateUserRole = async (role, id) => {
+        const res = await axiosSecure.put(`/change-user-role/${id}`, { role })
+        if (res.data.modifiedCount > 0) {
+            refetch()
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Student Role Has Updated',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+
+    }
+    const deleteUser = (id) => {
+        Swal.fire({
+            title: 'Are you sure?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                axiosSecure.delete(`/delete-user/${id}`)
+                    .then(data => {
+                        if (data.data.deletedCount > 0) {
+                            refetch()
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
+                        }
+                    })
+
+            }
+        })
+
+
+    }
+
     return (
         <div className='max-w-[1240px] mx-auto my-10'>
 
@@ -22,15 +72,9 @@ const ManageUser = () => {
                     </thead>
                     <tbody >
 
-                        <tr className="border-b-2 text-[#737373]">
-                            <td className="py-2 text-center text-[#151515] font-bold">1</td>
-                            <td className="py-2"><img className="h-[75px] w-[75px] object-cover mx-auto" src='https://i.ibb.co/zSf4QdG/licensed-image-3.jpg' alt="" /></td>
-                            <td className="py-2 text-center">item_name</td>
-                            <td className="py-2 text-center">Category</td>
-                            <td className="py-2 text-center">$price</td>
-                            <td className="py-2"><button className="bg-[#B91C1C] p-3 rounded text-white block mx-auto"><BsTrash3Fill /></button></td>
-                        </tr>
-
+                        {
+                            users && users.map((user, i) => <ManageUserCard key={user._id} i={i} user={user} updateUserRole={updateUserRole} deleteUser={deleteUser} />)
+                        }
                     </tbody>
                 </table>
             </section>

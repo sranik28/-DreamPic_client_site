@@ -1,10 +1,10 @@
 import { Navigate, useLocation } from 'react-router-dom';
-import { useAuth } from '../../context/AuthProvider';
-import useAuthorization from '../../hooks/useAuthorization';
+import { useAuthGlobally } from '../context/AuthProvider';
+import useAuthorization from '../hook/useAuthorization';
 
 
 const AdminOnly = ({children}) => {
-    const {loading, user} = useAuth()
+    const {loading, user} = useAuthGlobally()
     const {isLoading, role} = useAuthorization()
     const location = useLocation();
     if(loading || isLoading){

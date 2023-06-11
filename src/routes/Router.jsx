@@ -18,6 +18,8 @@ import MySelectClass from "../Dashboard.jsx/student/shared/MySelectClass";
 import Payment from "../Dashboard.jsx/student/shared/Payment";
 import PaymentHistory from "../Dashboard.jsx/student/shared/PaymentHistory";
 import Edit from "../Dashboard.jsx/Instructors/components/Edit";
+import InstructorOnly from "../private/InstructorOnly";
+import AdminOnly from "../private/AdminOnly";
 
 
 
@@ -57,23 +59,23 @@ const Router = createBrowserRouter([
         children: [
             {
                 path: '/dashboard/add-class',
-                element: <AddClass />
+                element: <InstructorOnly><AddClass /></InstructorOnly>
             },
             {
                 path: '/dashboard/my-class',
-                element: <MyClass />
+                element: <InstructorOnly><MyClass /></InstructorOnly>
             },
             {
-                path: '/dashboard/edit',
-                element: <Edit />
+                path: '/dashboard/:id/edit',
+                element: <InstructorOnly><Edit /></InstructorOnly>
             },
             {
                 path: '/dashboard/manage-class',
-                element: <ManageClass />
+                element: <AdminOnly><ManageClass /></AdminOnly>
             },
             {
                 path: '/dashboard/manage-users',
-                element: <ManageUser />
+                element: <AdminOnly><ManageUser /></AdminOnly>
             },
             {
                 path: '/dashboard/my-enroll-class',

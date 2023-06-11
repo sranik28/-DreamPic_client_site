@@ -6,6 +6,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import useDark from '../../hook/useDark';
 import { useAuthGlobally } from '../../context/AuthProvider';
 import logo from '../../assets/logo.png'
+import useAuthorization from '../../hook/useAuthorization';
 
 const NavBar = () => {
 
@@ -13,6 +14,8 @@ const NavBar = () => {
     const [isDark, setIsdark] = useState(null)
     useDark(isDark)
     const { user, logOut } = useAuthGlobally();
+    const {role}=useAuthorization()
+    
 
 
     return (
@@ -40,7 +43,7 @@ const NavBar = () => {
                 </li>
                 {
                     user ? <li>
-                        <NavLink className={({ isActive }) => isActive ? "active" : ""} to="/dashboard">Dashboard </NavLink>
+                        <NavLink className={({ isActive }) => isActive ? "active" : ""} to={`/dashboard/${role === "admin" ? "manage-class" : role === "instructor" ? "add-class" : "my-select-class"}`}>Dashboard </NavLink>
                     </li> : <></>
                 }
                 <li>

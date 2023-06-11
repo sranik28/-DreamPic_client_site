@@ -37,7 +37,7 @@ const AuthProvider = ({ children }) => {
         const unsubscribe = onAuthStateChanged(auth, correntUser => {
             setUser(correntUser)
             if(correntUser) {
-                fetch(`https://dream-pic.vercel.app/jwt?email=${correntUser.email}`,
+                fetch(`http://localhost:8888/jwt?email=${correntUser.email}`,
                 {
                     method: "POST"
                 })

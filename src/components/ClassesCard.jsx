@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ClassesCard = ({ classes }) => {
+const ClassesCard = ({ classes, seletedClass }) => {
 
     const { student_enroll,
         class_image,
@@ -25,7 +25,7 @@ const ClassesCard = ({ classes }) => {
                 <p className='mb-1'><span className='text-lg font-semibold'>Student Enroll</span>: {student_enroll}</p>
                 <p className='mb-1'><span className='text-lg font-semibold'>Class Fee</span>: ${price}</p>
             </div>
-            <button disabled={avilable_seats === 0} className={`bg-[#4c5696] w-full mx-auto py-2 rounded-md text-white ${avilable_seats === 0
+            <button onClick={() => seletedClass(classes)} disabled={avilable_seats === 0} className={`bg-[#4c5696] w-full mx-auto py-2 rounded-md text-white ${avilable_seats === 0
                 ? 'bg-[#20243a]' : 'bg-[#4c5696]'} `}>{avilable_seats === 0
                     ? 'No seats available' : 'Enroll'}</button>
         </div>

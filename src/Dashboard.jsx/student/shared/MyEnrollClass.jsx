@@ -1,45 +1,41 @@
-import React from 'react';
-import useTitle from '../../../hook/useHook';
+import useEnrolledClasses from "../../../hook/useEnrolledClasses";
+import useTitle from "../../../hook/useHook";
+import EnrolledClassTable from "../Components/EnrolledClassTable";
 
 
 
 
-const MyEnrollClass = () => {
-    useTitle('MyEnrollClass')
+const EnrolledClass = () => {
+    useTitle("Enrolled Class")
+    const { enrolledClasses } = useEnrolledClasses()
+
+
     return (
-        <div>
-            <h1 className='my-10 text-3xl font-bold'>Enroll Class:</h1>
-            <div className='max-w-[1240px] mx-auto'>
-                <section className=' h-[500px] mt-2 overflow-x-auto relative'>
-                    <table className='w-full text-white'>
-                        <thead >
-                            <tr className='bg-[#1b1e34]  sticky top-0 px-10'>
-                                <th className='py-3'></th>
-                                <th className='py-3 uppercase'>Class Image</th>
-                                <th className='py-3 uppercase'>Class Name</th>
-                                <th className='py-3 uppercase'>Instructor Name</th>
-                                <th className='py-3 uppercase'>Instructor Email</th>
-                                <th className='py-3 uppercase'>Price</th>
-                            </tr>
-                        </thead>
-                        <tbody >
+        <main className='h-screen overflow-hidden'>
+            <section className='h-[650px] mt-2 overflow-x-auto relative'>
+                <table className='w-full'>
+                    <thead >
+                        <tr className='sticky top-0 px-10 bg-main'>
+                            <th className='py-3 text-white'></th>
+                            <th className='py-3 text-white'>Class Image</th>
+                            <th className='py-3 text-white'>Class Name</th>
+                            <th className='py-3 text-white'>Instructor Name</th>
+                            <th className='py-3 text-white'>Instructor Email</th>
+                            <th className='py-3 text-white'>Price</th>
 
-                            <tr className="border-b-2 text-[#737373]">
-                                <td className="py-2 text-center text-[#151515] font-bold">1</td>
-                                <td className="py-2"><img className="h-[75px] w-[75px] object-cover mx-auto" src='https://i.ibb.co/zSf4QdG/licensed-image-3.jpg' alt="" /></td>
-                                <td className="py-2 text-center">item_name</td>
-                                <td className="py-2 text-center">Category</td>
-                                <td className="py-2 text-center">$price</td>
-                                <td className="py-2 text-center">$price</td>
+                        </tr>
+                    </thead>
+                    <tbody >
 
-                            </tr>
+                        {
+                            enrolledClasses && enrolledClasses.map((singleClass, i) => <EnrolledClassTable key={singleClass._id} singleClass={singleClass} i={i} />)
+                        }
 
-                        </tbody>
-                    </table>
-                </section>
-            </div>
-        </div>
+                    </tbody>
+                </table>
+            </section>
+        </main>
     );
 };
 
-export default MyEnrollClass;
+export default EnrolledClass;

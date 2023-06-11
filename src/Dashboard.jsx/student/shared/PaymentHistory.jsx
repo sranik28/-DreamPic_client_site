@@ -1,37 +1,37 @@
-import React from 'react';
-import useTitle from '../../../hook/useHook';
+import useTitle from "../../../hook/useHook";
+import usePayment from "../../../hook/usePayment";
+import PaymentHistoryTable from "../Components/PaymentHistoryTable";
+
 
 
 
 const PaymentHistory = () => {
-    useTitle('PaymentHistory')
+    useTitle("Payment History")
+    const { paymentHistory } = usePayment()
+
+
     return (
-        <div>
-            <div className='max-w-[1240px] mx-auto my-20'>
-                <section className='  h-[500px] mt-2 overflow-x-auto relative'>
-                    <table className='w-full text-white'>
-                        <thead >
-                            <tr className='bg-[#1b1e34]  sticky top-0 px-10'>
-                                <th className='py-3'></th>
-                                <th className='py-3 uppercase'>Transaction Id</th>
-                                <th className='py-3 uppercase'>Price</th>
-                                <th className='py-3 uppercase'>Payment Date</th>
-                            </tr>
-                        </thead>
-                        <tbody >
+        <main className='h-screen overflow-hidden'>
+            <section className='h-[650px] mt-2 overflow-x-auto relative'>
+                <table className='w-full'>
+                    <thead >
+                        <tr className='sticky top-0 px-10 bg-main'>
+                            <th className='py-3 text-white'></th>
+                            <th className='py-3 text-white'>Transaction Id</th>
+                            <th className='py-3 text-white'>Price</th>
+                            <th className='py-3 text-white'>Payment Date</th>
+                        </tr>
+                    </thead>
+                    <tbody >
 
-                            <tr className="border-b-2 text-[#737373]">
-                                <td className="py-2 text-center text-[#151515] font-bold">1</td>
-                                <td className="py-2"><img className="h-[75px] w-[75px] object-cover mx-auto" src='https://i.ibb.co/zSf4QdG/licensed-image-3.jpg' alt="" /></td>
-                                <td className="py-2 text-center">item_name</td>
-                                <td className="py-2 text-center">Category</td>
-                            </tr>
+                        {
+                            paymentHistory && paymentHistory.map((payment, i) => <PaymentHistoryTable key={payment._id} payment={payment} i={i} />)
+                        }
 
-                        </tbody>
-                    </table>
-                </section>
-            </div>
-        </div>
+                    </tbody>
+                </table>
+            </section>
+        </main>
     );
 };
 
