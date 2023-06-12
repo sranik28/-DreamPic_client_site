@@ -84,9 +84,7 @@ const Login = () => {
         <main className='flex items-center justify-center w-full md:h-screen bg-[#1b1e34] px-3 '>
 
             <div className='max-w-[1240px] w-full mx-auto mt-10 grid  md:grid-cols-2 gap-5 md:gap-0 py-5'>
-                <div data-aos="fade-right"
-                    data-aos-offset="300"
-                    data-aos-easing="ease-in-sine" className='flex items-center justify-center bg-[#ffffff]  rounded-s-md p-3 '>
+                <div  className='flex items-center justify-center bg-[#ffffff]  rounded-s-md p-3 '>
                     <div className='text-center bg-[#ffffff]  rounded-s-md px-3 '>
                         <h1 className='my-5 text-2xl font-bold '>
                             Welcome to the <br /> MyPhotography Learning Portal</h1>
@@ -94,10 +92,7 @@ const Login = () => {
                         <Link className='px-10 py-2 font-semibold text-white bg-black rounded-md' to="/">Home</Link>
                     </div>
                 </div>
-                <div data-aos="fade-left"
-                    data-aos-anchor="#example-anchor"
-                    data-aos-offset="500"
-                    data-aos-duration="500" className='bg-black border-2 border-[#4c5696] rounded-e-md'>
+                <div className='bg-black border-2 border-[#4c5696] rounded-e-md'>
                     <h1 className='my-5 text-5xl font-bold text-center text-white'>Please Login</h1>
                     <div className=' text-center py-5 rounded md:w-[500px] mx-auto my-5'>
                         <form onSubmit={handleSubmit(handleLogin)}>
