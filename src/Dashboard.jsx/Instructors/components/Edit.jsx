@@ -74,7 +74,7 @@ const Edit = () => {
                 </section>
             
                 <div >
-                    <button className="block w-full px-4 py-3 mt-10 text-white rounded bg-main"  type="submit">Update Class</button>
+                    <button className="block w-full px-4 py-3 mt-10 text-white rounded bg-[#1b1e34]"  type="submit">Update Class</button>
                 </div>
                 
             </form>

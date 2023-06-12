@@ -18,8 +18,8 @@ const ManageClassCard = ({singleClass, i, openFeed, updateStatus}) => {
             <td className="py-2 text-center">
                 <div>
                     <button onClick={() => updateStatus("Approved", _id)} disabled={status === "Approved" || status === "denied"} className={`${status === "Approved" || status === "denied" ? "opacity-25 cursor-not-allowed" : ""} bg-[#1b1e34] text-white px-6 py-2 rounded m-1 text-sm block mx-auto`}>Approved</button>
-                    <button onClick={() => updateStatus("denied", _id)} disabled={status === "Approved" || status === "denied"} className={`${status === "Approved" || status === "denied" ? "opacity-25 cursor-not-allowed" : ""} bg-main px-6 py-2 rounded m-1 text-sm block bg-[#1b1e34] text-white mx-auto`}>Denied</button>
-                    <button onClick={() => openFeed(_id)} className="block px-6 py-2 m-1 mx-auto text-sm rounded bg-[#1b1e34] text-white bg-main">
+                    <button onClick={() => updateStatus("denied", _id)} disabled={status === "Approved" || status === "denied"} className={`${status === "Approved" || status === "denied" ? "opacity-25 cursor-not-allowed" : ""} bg-[#1b1e34]] px-6 py-2 rounded m-1 text-sm block bg-[#1b1e34] text-white mx-auto`}>Denied</button>
+                    <button onClick={() => openFeed(_id)} className="block px-6 py-2 m-1 mx-auto text-sm rounded  text-white bg-[#1b1e34]">
                         Send Feedback
                     </button>
                 </div>

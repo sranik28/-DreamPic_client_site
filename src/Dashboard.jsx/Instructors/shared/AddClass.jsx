@@ -92,7 +92,7 @@ const AddClass = () => {
                 </section>
             
                 <div >
-                    <button className="block w-full px-4 py-3 mt-10 text-white rounded bg-main"  type="submit">Add Class</button>
+                    <button className="block w-full px-4 py-3 mt-10 text-white rounded bg-[#4c5696]"  type="submit">Add Class</button>
                 </div>
                 
             </form>

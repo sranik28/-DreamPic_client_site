@@ -1,4 +1,3 @@
-
 import InstructorCard from '../components/InstructorCard';
 import instructorBanner from '../assets/Instructors/FX30-Desktop_Banner_1600x641_q91iWY6_cleanup.png';
 import useTitle from '../hook/useHook';

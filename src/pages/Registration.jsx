@@ -26,6 +26,7 @@ const Registration = () => {
     const handleRegister = (data) => {
 
 
+
         setSuccess("");
         setError("");
 
@@ -56,14 +57,38 @@ const Registration = () => {
                 reset();
                 updateProfile(currentUser, { displayName: name, photoURL: photo })
                 setSuccess("User has created successfully");
+                const user = {
+                    name: name,
+                    email: email,
+                    photo_url: photo
+                }
+
+                axiosSecure.put(`/add-user?email=${user?.email}`, user)
+                    .then(res => {
+                        console.log(res)
+                        if (res.data) {
+
+                            Swal.fire({
+                                position: 'center',
+                                icon: 'success',
+                                title: 'Sign Up sucessfull',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+
+                        }
+                    })
+                navigate("/")
+
+                setSuccess("Registration successfull")
+                reset()
 
             })
             .catch(error => {
-
-                setError(error.message)
+                // setError(error)
             })
-
     }
+
     const handelGoogle = () => {
         signInGoogle()
             .then((result) => {
