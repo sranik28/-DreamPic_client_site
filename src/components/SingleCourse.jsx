@@ -12,7 +12,7 @@ const SingleCourse = ({ course }) => {
         price } = course;
 
     return (
-        <div>
+        <div className='p-3 transition-all duration-300 rounded-md shadow-md hover:shadow-[#1b1e34] hover:scale-105'>
             <img className='object-cover rounded-md w-96' src={class_image} alt="" />
             <Fade triggerOnce={.6} delay={300} direction="up" cascade>
                 <h2 className='my-2 text-xl font-bold'>{class_name}</h2>

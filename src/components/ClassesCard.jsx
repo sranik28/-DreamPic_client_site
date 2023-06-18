@@ -16,7 +16,7 @@ const ClassesCard = ({ classes, seletedClass }) => {
         price } = classes;
 
     return (
-        <div className={`flex flex-col justify-between p-3 border-2 border-gray-300 rounded-md ${avilable_seats === 0
+        <div className={`flex flex-col justify-between p-3 transition-all duration-300  shadow-md hover:shadow-[#1b1e34] border-2 border-gray-300 rounded-md ${avilable_seats === 0
             ? 'bg-red-500' : 'bg-white'}`}>
             <div>
                 <motion.img
