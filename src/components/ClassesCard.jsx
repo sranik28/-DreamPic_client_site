@@ -17,7 +17,7 @@ const ClassesCard = ({ classes, seletedClass }) => {
 
     return (
         <div className={`flex flex-col justify-between p-3 transition-all duration-300  shadow-md hover:shadow-[#1b1e34] border-2 border-gray-300 rounded-md ${avilable_seats === 0
-            ? 'bg-red-500' : ''}`}>
+            ? 'bg-red-400' : ''}`}>
             <div>
                 <motion.img
                     initial={{ opacity: 0, scale: 0 }}
