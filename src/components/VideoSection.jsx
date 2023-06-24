@@ -21,12 +21,12 @@ const VideoSection = () => {
 
     return (
         <div className="px-3 max-w-[1240px] mx-auto mb-20">
-            <div className="my-10 text-center border-indigo-500 border-x-4">
+            <motion.div className="my-10 text-center border-indigo-500 border-x-4">
                 <h1 className="text-4xl font-bold md:text-6xl">
                     Our Blog <span className="text-[#4c5696]">Video</span>
                 </h1>
                 <p className="my-2 text-xl ">Before heading out with your camera, take some time to research and plan your shoot. </p>
-            </div>
+            </motion.div>
             <div className="flex flex-col items-center mx-2 my-7">
                 <div className="w-30">
                     <YouTube videoId={currentVideoId} opts={opts} />

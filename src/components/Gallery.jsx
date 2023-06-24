@@ -11,7 +11,7 @@ const Gallery = () => {
                 <h1 className='text-4xl font-bold text-center md:text-6xl'>Our <span className='text-[#4c5696]'>Gallery</span></h1>
                 <p className='my-3 text-xl text-center'>This is our top student picture</p>
             </div>
-            <div className=' bg-[#1d232a] grid px-3 md:grid-cols-3 gap-10'>
+            <div className='grid gap-10 px-3  md:grid-cols-3'>
                 <div className='p-3 transition duration-300 ease-in-out scale-105 border-2 border-gray-700 shadow-lg hover:shadow-inner shadow-black'>
                     <img className='w-full h-full transition duration-300 ease-in-out hover:scale-105' src="https://lh3.googleusercontent.com/pw/AJFCJaULLOi26Qalh9JieA8bTnfCQ8wiH05n8T9RiTwb3R80nDmgi1rxaoNBnWtmTKvNaBcFjrVRW7Xl2W-7SU2ibXwHeV1rKnIzAEC9NTyZL7Lx9ZslgMSc6S3M26A0Ygbh5mK-P1QeBQFi2l90Y-P_5Lm_w1tpBkMljHUoFNWkpfHFLO5HT4NhQlwWcu9YdYGHYNOdhmE2o_Nt993xVlEbNHlR6CiGm-tbrYvjrx9MaiQbqkTcyw1eaJcqozFScqn2OumLw0YNr7Eg1atPVnikp0higpgijmCPJ_pWE_qagkYpoj2ttTeoJFbdy0Bx4S0wmOGjrVmRqWGeqcdZWuOLc27FoTKY9aibC9Qjo8G7Z3CcPdebmpisE3CFRLZIaZA93zCYDScZpzCNaq8sUKW9TxijYCOKuVV39O75_S_gUA_7L_naE9JsCZ9mG6kjhAz0tQDLZwYUXr46I0tmdsEq5bcTyTYVURzm3SkqqMk-FG2PD7i6tipf0C5kzD5zQCqSzyM4UXu3L_S20u9hmqMg6yqcFJDDCtIoWIzq4K1bUqPfXZ1D-uVBDThCrBsNJpA-VyD2ZoCE5_Qmm0nTCPVsnJ2HTt_W3tTpzyq1yniJEx0TxfKuokHFTJNIHhX8ZxDc_0vPTcMTbTVX0wqB4X970KQS3bFpe3qd7GlmyUC4cZSBkaBhi83-tNdFlxWd15KUA9eJ9HRNCz7ARcjhCFHgYgp-1uTdi460sSCfHOe2Fc29--Xel7PzlGojTCpcBQX9TBgH1sgDasKKFQ4N7SRbK2ML01uPCsd24_AH0dlL7EPuVPqpTG_yLjYYSqsae58adaVZYpCaCOYOqRXgxeJDb67XdJe4F7M1cxtLCxoNtH1ueVO0wmo0jQ6EXpHtBuxDRcnoVRsLfWKnHZ75tHc0KN1jCQ=w1761-h990-s-no?authuser=0" alt="" />
                     

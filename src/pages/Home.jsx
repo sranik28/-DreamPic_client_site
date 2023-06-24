@@ -9,6 +9,7 @@ import ClientList from '../components/ClientList';
 import useTitle from '../hook/useHook';
 import Gallery from '../components/Gallery';
 import Campuses from '../components/Campuses';
+import Technology from '../components/Technology';
 
 
 
@@ -24,6 +25,7 @@ const Home = () => {
             <Gallery />
             <Campuses />
             <TopCourses />
+            <Technology />
             <TopInstructor />
             <VideoSection />
             <ClientList />
