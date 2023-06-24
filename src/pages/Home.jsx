@@ -8,6 +8,7 @@ import VideoSection from '../components/VideoSection';
 import ClientList from '../components/ClientList';
 import useTitle from '../hook/useHook';
 import Gallery from '../components/Gallery';
+import Campuses from '../components/Campuses';
 
 
 
@@ -21,6 +22,7 @@ const Home = () => {
             <Banner />
             <Experience />
             <Gallery />
+            <Campuses />
             <TopCourses />
             <TopInstructor />
             <VideoSection />
