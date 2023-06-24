@@ -7,6 +7,8 @@ import TopInstructor from '../components/TopInstructor';
 import VideoSection from '../components/VideoSection';
 import ClientList from '../components/ClientList';
 import useTitle from '../hook/useHook';
+import Gallery from '../components/Gallery';
+
 
 
 
@@ -18,6 +20,7 @@ const Home = () => {
 
             <Banner />
             <Experience />
+            <Gallery />
             <TopCourses />
             <TopInstructor />
             <VideoSection />

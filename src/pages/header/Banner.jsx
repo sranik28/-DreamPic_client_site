@@ -25,15 +25,15 @@ const Banner = () => {
                             <div className='absolute md:top-40 top-48 left-20 md:left-1/3'>
                                 <h1 className='my-5 text-2xl font-bold md:text-5xl'> <Typewriter
                                     options={{
-                                        strings: ['Mobile Photography', 'Camera Photography', 'Photo Editing'],
+                                        strings: ['Mobile Photo', 'Camera Photo', 'Photo Editing'],
                                         autoStart: true,
                                         loop: true,
                                     }}
                                 /> </h1>
                             </div>
-                            <p className='absolute md:left-[15%] left-10 top-64  md:top-[40%]'>Phytography, also known as botanical photography, is a captivating art form  that combines a love for nature and  a passion for photography.  </p>
-                            <p className='absolute text-xl text-center  md:top-80
-                            top-[350px]  left-28 md:left-[45%]'>By DreamPic</p>
+                            {/* <p className='absolute md:left-[15%] left-10 top-64  md:top-[43%]'>Phytography, also known as botanical photography, is a captivating art form  that combines a love for nature and  a passion for photography.  </p> */}
+                            <p className='absolute text-xl text-center  md:top-60
+                            top-[350px]  left-28 md:left-[40%]'>By DreamPic</p>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -44,15 +44,15 @@ const Banner = () => {
                             <div className='absolute md:top-40 top-48 left-20 md:left-1/3'>
                                 <h1 className='my-5 text-2xl font-bold md:text-5xl'> <Typewriter
                                     options={{
-                                        strings: ['Mobile Photography', 'Camera Photography', 'Photo Editing'],
+                                        strings: ['Mobile Photo', 'Camera Photo', 'Photo Editing'],
                                         autoStart: true,
                                         loop: true,
                                     }}
                                 /> </h1>
                             </div>
-                            <p className='absolute md:left-[15%] left-10 top-64  md:top-[40%]'>Phytography, also known as botanical photography, is a captivating art form  that combines a love for nature and  a passion for photography.  </p>
-                            <p className='absolute text-xl text-center  md:top-80
-                            top-[350px]  left-28 md:left-[45%]'>By DreamPic</p>
+                            {/* <p className='absolute md:left-[15%] left-10 top-64  md:top-[40%]'>Phytography, also known as botanical photography, is a captivating art form  that combines a love for nature and  a passion for photography.  </p> */}
+                            <p className='absolute text-xl text-center  md:top-60
+                            top-[350px]  left-28 md:left-[40%]'>By DreamPic</p>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -63,15 +63,15 @@ const Banner = () => {
                             <div className='absolute md:top-40 top-48 left-20 md:left-1/3'>
                                 <h1 className='my-5 text-2xl font-bold md:text-5xl'> <Typewriter
                                     options={{
-                                        strings: ['Mobile Photography', 'Camera Photography', 'Photo Editing'],
+                                        strings: ['Mobile Photo', 'Camera Photo', 'Photo Editing'],
                                         autoStart: true,
                                         loop: true,
                                     }}
                                 /> </h1>
                             </div>
-                            <p className='absolute md:left-[15%] left-10 top-64  md:top-[40%]'>Phytography, also known as botanical photography, is a captivating art form  that combines a love for nature and  a passion for photography.  </p>
-                            <p className='absolute text-xl text-center  md:top-80
-                            top-[350px]  left-28 md:left-[45%]'>By DreamPic</p>
+                            {/* <p className='absolute md:left-[15%] left-10 top-64  md:top-[40%]'>Phytography, also known as botanical photography, is a captivating art form  that combines a love for nature and  a passion for photography.  </p> */}
+                            <p className='absolute text-xl text-center  md:top-60
+                            top-[350px]  left-28 md:left-[40%]'>By DreamPic</p>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -82,15 +82,15 @@ const Banner = () => {
                             <div className='absolute md:top-40 top-48 left-20 md:left-1/3'>
                                 <h1 className='my-5 text-2xl font-bold md:text-5xl'> <Typewriter
                                     options={{
-                                        strings: ['Mobile Photography', 'Camera Photography', 'Photo Editing'],
+                                        strings: ['Mobile Photo', 'Camera Photo', 'Photo Editing'],
                                         autoStart: true,
                                         loop: true,
                                     }}
                                 /> </h1>
                             </div>
-                            <p className='absolute md:left-[15%] left-10 top-64  md:top-[40%]'>Phytography, also known as botanical photography, is a captivating art form  that combines a love for nature and  a passion for photography.  </p>
-                            <p className='absolute text-xl text-center  md:top-80
-                            top-[350px]  left-28 md:left-[45%]'>By DreamPic</p>
+                            {/* <p className='absolute md:left-[15%] left-10 top-64  md:top-[40%]'>Phytography, also known as botanical photography, is a captivating art form  that combines a love for nature and  a passion for photography.  </p> */}
+                            <p className='absolute text-xl text-center  md:top-60
+                            top-[350px]  left-28 md:left-[40%]'>By DreamPic</p>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -101,15 +101,15 @@ const Banner = () => {
                             <div className='absolute md:top-40 top-48 left-20 md:left-1/3'>
                                 <h1 className='my-5 text-2xl font-bold md:text-5xl'> <Typewriter
                                     options={{
-                                        strings: ['Mobile Photography', 'Camera Photography', 'Photo Editing'],
+                                        strings: ['Mobile Photo', 'Camera Photo', 'Photo Editing'],
                                         autoStart: true,
                                         loop: true,
                                     }}
                                 /> </h1>
                             </div>
-                            <p className='absolute md:left-[15%] left-10 top-64  md:top-[40%]'>Phytography, also known as botanical photography, is a captivating art form  that combines a love for nature and  a passion for photography.  </p>
-                            <p className='absolute text-xl text-center  md:top-80
-                            top-[350px]  left-28 md:left-[45%]'>By DreamPic</p>
+                            {/* <p className='absolute md:left-[15%] left-10 top-64  md:top-[40%]'>Phytography, also known as botanical photography, is a captivating art form  that combines a love for nature and  a passion for photography.  </p> */}
+                            <p className='absolute text-xl text-center  md:top-60
+                            top-[350px]  left-28 md:left-[40%]'>By DreamPic</p>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -120,15 +120,15 @@ const Banner = () => {
                             <div className='absolute md:top-40 top-48 left-20 md:left-1/3'>
                                 <h1 className='my-5 text-2xl font-bold md:text-5xl'> <Typewriter
                                     options={{
-                                        strings: ['Mobile Photography', 'Camera Photography', 'Photo Editing'],
+                                        strings: ['Mobile Photo', 'Camera Photo', 'Photo Editing'],
                                         autoStart: true,
                                         loop: true,
                                     }}
                                 /> </h1>
                             </div>
-                            <p className='absolute md:left-[15%] left-10 top-64  md:top-[40%]'>Phytography, also known as botanical photography, is a captivating art form  that combines a love for nature and  a passion for photography.  </p>
-                            <p className='absolute text-xl text-center  md:top-80
-                            top-[350px]  left-28 md:left-[45%]'>By DreamPic</p>
+                            {/* <p className='absolute md:left-[15%] left-10 top-64  md:top-[40%]'>Phytography, also known as botanical photography, is a captivating art form  that combines a love for nature and  a passion for photography.  </p> */}
+                            <p className='absolute text-xl text-center  md:top-60
+                            top-[350px]  left-28 md:left-[40%]'>By DreamPic</p>
                         </div>
                     </div>
                 </SwiperSlide>
