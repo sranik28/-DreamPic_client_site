@@ -50,8 +50,8 @@ const Reviews = () => {
         <section className="px-3 my-20">
             <div
                 className='my-20 border-indigo-500 border-x-4' >
-                <h1 className='text-4xl font-bold text-center md:text-6xl'>Facilities & <span className='text-[#4c5696]'>Technology</span></h1>
-                <p className='my-3 text-xl text-center'>This is our all facilities and technology</p>
+                <h1 className='text-4xl font-bold text-center md:text-6xl'>Client <span className='text-[#4c5696]'>Reviews</span></h1>
+                <p className='my-3 text-xl text-center'></p>
             </div>
             <Swiper
                 slidesPerView={3}
