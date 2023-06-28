@@ -47,7 +47,7 @@ const Reviews = () => {
         
     ]
     return (
-        <section className="px-3 my-20">
+        <section className="px-3 my-20 max-w-[1240px] mx-auto">
             <div
                 className='my-20 border-indigo-500 border-x-4' >
                 <h1 className='text-4xl font-bold text-center md:text-6xl'>Client <span className='text-[#4c5696]'>Reviews</span></h1>
