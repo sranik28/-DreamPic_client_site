@@ -10,7 +10,7 @@ import useTitle from '../hook/useHook';
 import Gallery from '../components/Gallery';
 import Campuses from '../components/Campuses';
 import Technology from '../components/Technology';
-// import Reviews from '../components/Reviews';
+import Reviews from '../components/Reviews';
 
 
 
@@ -29,7 +29,7 @@ const Home = () => {
             <Technology />
             <TopInstructor />
             <VideoSection />
-            {/* <Reviews /> */}
+            <Reviews />
             <ClientList />
             <Subscribe />
         </div>
