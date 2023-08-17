@@ -1,8 +1,11 @@
 import React from 'react';
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import Typewriter from 'typewriter-effect';
 
 
@@ -11,12 +14,20 @@ const Banner = () => {
     return (
         <div className='overflow-x-hidden'>
             <Swiper
+               
                 spaceBetween={30}
+                centeredSlides={true}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
                 pagination={{
                     clickable: true,
                 }}
-                modules={[Pagination]}
+                
+                modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
+
             >
                 <SwiperSlide>
                     <div className='relative w-full h-full'>
@@ -33,7 +44,7 @@ const Banner = () => {
                             </div>
                             {/* <p className='absolute md:left-[15%] left-10 top-64  md:top-[43%]'>Phytography, also known as botanical photography, is a captivating art form  that combines a love for nature and  a passion for photography.  </p> */}
                             <p className='absolute text-xl text-center  md:top-60
-                            top-[250px]  left-28 md:left-[40%]'>By DreamPic</p>
+                            top-[250px] text-[#051136] font-bold left-28 md:left-[40%]'>By DreamPic</p>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -52,7 +63,7 @@ const Banner = () => {
                             </div>
                             {/* <p className='absolute md:left-[15%] left-10 top-64  md:top-[40%]'>Phytography, also known as botanical photography, is a captivating art form  that combines a love for nature and  a passion for photography.  </p> */}
                             <p className='absolute text-xl text-center  md:top-60
-                            top-[250px] left-28 md:left-[40%]'>By DreamPic</p>
+                            top-[250px] text-[#051136] font-bold left-28 md:left-[40%]'>By DreamPic</p>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -71,7 +82,7 @@ const Banner = () => {
                             </div>
                             {/* <p className='absolute md:left-[15%] left-10 top-64  md:top-[40%]'>Phytography, also known as botanical photography, is a captivating art form  that combines a love for nature and  a passion for photography.  </p> */}
                             <p className='absolute text-xl text-center  md:top-60
-                           top-[250px]  left-28 md:left-[40%]'>By DreamPic</p>
+                           top-[250px] text-[#051136] font-bold left-28 md:left-[40%]'>By DreamPic</p>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -90,7 +101,7 @@ const Banner = () => {
                             </div>
                             {/* <p className='absolute md:left-[15%] left-10 top-64  md:top-[40%]'>Phytography, also known as botanical photography, is a captivating art form  that combines a love for nature and  a passion for photography.  </p> */}
                             <p className='absolute text-xl text-center  md:top-60
-                            top-[250px]  left-28 md:left-[40%]'>By DreamPic</p>
+                            top-[250px] text-[#051136] font-bold left-28 md:left-[40%]'>By DreamPic</p>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -109,7 +120,7 @@ const Banner = () => {
                             </div>
                             {/* <p className='absolute md:left-[15%] left-10 top-64  md:top-[40%]'>Phytography, also known as botanical photography, is a captivating art form  that combines a love for nature and  a passion for photography.  </p> */}
                             <p className='absolute text-xl text-center  md:top-60
-                            top-[250px]  left-28 md:left-[40%]'>By DreamPic</p>
+                            top-[250px] text-[#051136] font-bold left-28 md:left-[40%]'>By DreamPic</p>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -128,7 +139,7 @@ const Banner = () => {
                             </div>
                             {/* <p className='absolute md:left-[15%] left-10 top-64  md:top-[40%]'>Phytography, also known as botanical photography, is a captivating art form  that combines a love for nature and  a passion for photography.  </p> */}
                             <p className='absolute text-xl text-center  md:top-60
-                           top-[250px]  left-28 md:left-[40%]'>By DreamPic</p>
+                           top-[250px] text-[#051136] font-bold left-28 md:left-[40%]'>By DreamPic</p>
                         </div>
                     </div>
                 </SwiperSlide>

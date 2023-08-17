@@ -11,18 +11,18 @@ import logo from '../assets/logo.png';
 
 const Footer = () => {
     return (
-        <footer className='bg-[#5d5599] '>
+        <footer className=''>
             <ScrollToTop smooth top={1000} component={<MyIcon />} />
             <div className=' max-w-[1240px] mx-auto py-10'>
-                <div className='grid gap-4 p-5 text-white md:grid-cols-5'>
+                <div className='grid gap-4 p-5 text-black md:grid-cols-5'>
                     <div>
                         <div >
                             <Link to='/'><img className='w-20 h-20 -mb-2 ' src={logo} alt="" /></Link>
                             <h1 className='mt-2 text-2xl italic font-bold'> <span className='text-[#1b2349]'>Dream</span>Pic</h1>
                         </div>
                         <div className='flex items-center justify-center my-5'>
-                            <input type="text" name="" id="" placeholder='Search...' className='w-full p-2 bg-[#1b2349] text-white rounded-s-md' />
-                            <input className='outline-none px-5 py-2 bg-[#0a0c1a] rounded-e-md' type="submit" value="submit" />
+                            <input type="text" name="" id="" placeholder='Search...' className='w-full outline-none p-2 bg-[#1b2349]  rounded-s-md' />
+                            <input className='outline-none px-5 py-2 bg-[#0a0c1a] text-white rounded-e-md' type="submit" value="submit" />
                         </div>
                     </div>
                     <div>

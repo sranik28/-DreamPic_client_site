@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
+// import { Pagination } from "swiper";
 import '@smastrom/react-rating/style.css'
 import { Rating } from "@smastrom/react-rating";
 
